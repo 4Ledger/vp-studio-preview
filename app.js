@@ -1,4 +1,4 @@
-import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=9";
+import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=11";
 
 const icon = (name) => `<svg aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 
@@ -167,13 +167,18 @@ const toast = document.querySelector("#toast");
 const toastCopy = toast.querySelector("span");
 const loginIdentity = document.querySelector("#login-identity");
 const loginPassword = document.querySelector("#login-password");
+const loginPanel = document.querySelector(".login-panel");
+const loginTitle = document.querySelector("#login-title");
+const passwordToggle = document.querySelector("#password-toggle");
+const rememberProfile = document.querySelector("#remember-profile");
 const accountDialog = document.querySelector("#account-dialog");
 const experienceStylesheet = document.querySelector("#experience-picker-styles");
+const selectedRoleLabel = document.querySelector("#selected-role-label");
 
 const experienceNames = {
   mineral: "Mineral",
-  terracota: "Argila",
-  editorial: "Editorial",
+  terracota: "Cobre Urbano",
+  editorial: "Atlântico",
 };
 
 const experienceLoginCopy = {
@@ -183,14 +188,25 @@ const experienceLoginCopy = {
     instruction: "Entre para acompanhar seu treino e sua evolução.",
   },
   terracota: {
-    eyebrow: "VINICIUS PONTES STUDIO",
-    title: "Veja seu próximo treino.",
-    instruction: "Agenda e acompanhamento sempre à mão.",
+    eyebrow: "ACESSO AO STUDIO",
+    title: "Sua rotina começa aqui.",
+    instruction: "Treino, agenda e acompanhamento sem distrações.",
   },
   editorial: {
-    eyebrow: "ACESSO AO STUDIO",
-    title: "Acesse sua rotina no studio.",
-    instruction: "Escolha como deseja entrar.",
+    eyebrow: "VP STUDIO · ACESSO",
+    title: "Seu treino. Seu ritmo.",
+    instruction: "Escolha o perfil e continue para o studio.",
+  },
+};
+
+const accessRoles = {
+  student: {
+    label: "Aluno",
+    identity: "carolina@vpstudio.com.br",
+  },
+  coach: {
+    label: "Professor",
+    identity: "vinicius@vpstudio.com.br",
   },
 };
 
@@ -222,8 +238,8 @@ function updateThemeColor() {
   const dark = document.documentElement.dataset.theme === "dark";
   const colors = {
     mineral: dark ? "#1d2529" : "#edf0f1",
-    terracota: dark ? "#24211f" : "#eee9e2",
-    editorial: dark ? "#20231f" : "#eeeee9",
+    terracota: dark ? "#171b1a" : "#f1f1ee",
+    editorial: dark ? "#14232c" : "#edf1f3",
   };
   document.querySelector('meta[name="theme-color"]').content = colors[state.experience] || colors.mineral;
 }
@@ -260,6 +276,8 @@ function showLoginScreen() {
   workspaceShell.classList.remove("is-active", "is-wellness");
   loginScreen.hidden = false;
   loginScreen.classList.add("is-active");
+  setAccessRole(state.role, { syncQuery: false });
+  loginPanel.scrollTo({ top: 0, behavior: "auto" });
   window.scrollTo({ top: 0, behavior: "auto" });
 }
 
@@ -277,6 +295,8 @@ function showExperiencePicker(returnTo = workspaceShell.hidden ? "login" : "work
 
 function chooseExperience(experience) {
   setExperience(experience);
+  setAccessRole(state.role);
+  syncExperienceQuery(experience);
   setExperiencePickerActive(false);
   experienceScreen.hidden = true;
   experienceScreen.classList.remove("is-active");
@@ -289,6 +309,22 @@ function chooseExperience(experience) {
   showLoginScreen();
 }
 
+function syncExperienceQuery(experience) {
+  const url = new URL(window.location.href);
+  const hasExplicitExperience = url.searchParams.has("experience") || url.searchParams.has("login");
+  if (!hasExplicitExperience) return;
+  url.searchParams.delete("login");
+  url.searchParams.set("experience", experience);
+  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
+function syncAccessRoleQuery(role) {
+  const url = new URL(window.location.href);
+  if (!url.searchParams.has("role")) return;
+  url.searchParams.set("role", role);
+  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
 function initialiseExperience() {
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("experience") || params.get("login");
@@ -299,20 +335,25 @@ function initialiseExperience() {
   else showExperiencePicker("login");
 }
 
-function setAccessRole(role) {
+function setAccessRole(role, options = {}) {
+  if (!accessRoles[role]) return false;
   state.role = role;
   document.querySelectorAll("[data-access-role]").forEach((button) => {
     const active = button.dataset.accessRole === role;
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-pressed", String(active));
   });
-  if (role === "coach") {
-    loginIdentity.value = "vinicius@vpstudio.com.br";
-    loginPassword.value = "homologacao";
-  } else {
-    loginIdentity.value = "carolina@vpstudio.com.br";
-    loginPassword.value = "homologacao";
-  }
+  document.querySelectorAll("[data-preview-role]").forEach((button) => {
+    const active = button.dataset.previewRole === role;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  loginScreen.dataset.selectedRole = role;
+  selectedRoleLabel.textContent = accessRoles[role].label;
+  loginIdentity.value = accessRoles[role].identity;
+  loginPassword.value = "homologacao";
+  if (options.syncQuery !== false) syncAccessRoleQuery(role);
+  return true;
 }
 
 function renderNavigation() {
@@ -405,12 +446,13 @@ function enterWorkspace(initialRoute = "home") {
 
 function logout() {
   if (accountDialog.open) accountDialog.close();
-  workspaceShell.hidden = true;
-  workspaceShell.classList.remove("is-active", "is-onboarding", "is-wellness");
-  loginScreen.hidden = false;
-  loginScreen.classList.add("is-active");
+  loginPassword.type = "password";
+  passwordToggle.textContent = "Mostrar";
+  passwordToggle.setAttribute("aria-label", "Mostrar senha");
   state.activeRoute = "home";
   state.activeView = "student-home";
+  showLoginScreen();
+  loginTitle.focus({ preventScroll: true });
 }
 
 function activeWellnessSteps() {
@@ -737,6 +779,13 @@ function wireStaticControls() {
     button.addEventListener("click", () => setAccessRole(button.dataset.accessRole));
   });
 
+  document.querySelectorAll("[data-preview-role]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setAccessRole(button.dataset.previewRole);
+      chooseExperience(button.dataset.previewExperience);
+    });
+  });
+
   document.querySelectorAll("[data-experience-choice]").forEach((button) => {
     button.addEventListener("click", () => chooseExperience(button.dataset.experienceChoice));
   });
@@ -761,10 +810,12 @@ function wireStaticControls() {
 
   document.querySelector("#login-form").addEventListener("submit", (event) => {
     event.preventDefault();
+    if (rememberProfile.checked) localStorage.setItem("vp-remembered-role", state.role);
+    else localStorage.removeItem("vp-remembered-role");
     enterWorkspace("home");
   });
 
-  document.querySelector("#password-toggle").addEventListener("click", (event) => {
+  passwordToggle.addEventListener("click", (event) => {
     const reveal = loginPassword.type === "password";
     loginPassword.type = reveal ? "text" : "password";
     event.currentTarget.textContent = reveal ? "Ocultar" : "Mostrar";
@@ -778,7 +829,7 @@ function wireStaticControls() {
     const route = event.target.closest("[data-route]");
     if (route) {
       if (workspaceShell.hidden && route.dataset.route === "account") {
-        state.role = "student";
+        setAccessRole("student");
         enterWorkspace("account");
       } else {
         setRoute(route.dataset.route);
@@ -892,7 +943,12 @@ function runDiagnostics() {
 
 initialiseTheme();
 initialiseExperience();
-setAccessRole("student");
+setAccessRole(
+  new URLSearchParams(window.location.search).get("role")
+    || localStorage.getItem("vp-remembered-role")
+    || "student",
+  { syncQuery: false },
+);
 wireStaticControls();
 setupPwa();
 runDiagnostics();

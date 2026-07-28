@@ -10,9 +10,9 @@
     <meta name="apple-mobile-web-app-title" content="VP Studio" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
-    <link rel="stylesheet" href="styles.css?v=9" />
-    <link rel="stylesheet" href="experience-tokens.css?v=9" />
-    <link rel="stylesheet" href="login-options.css?v=9" id="experience-picker-styles" />
+    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="stylesheet" href="experience-tokens.css?v=11" />
+    <link rel="stylesheet" href="login-options.css?v=11" id="experience-picker-styles" />
     <title>VP Studio</title>
   </head>
   <body>
@@ -150,9 +150,9 @@
                   </div>
 
                   <div class="mineral-form">
-                    <div class="role-segment" aria-label="Tipo de acesso">
-                      <span class="is-active">Aluno</span>
-                      <span>Professor</span>
+                    <div class="role-segment" role="group" aria-label="Tipo de acesso">
+                      <button class="is-active" type="button" data-preview-experience="mineral" data-preview-role="student" aria-pressed="true">Aluno</button>
+                      <button type="button" data-preview-experience="mineral" data-preview-role="coach" aria-pressed="false">Professor</button>
                     </div>
                     <label class="preview-field">
                       <span>E-mail ou celular</span>
@@ -185,13 +185,13 @@
               <header class="concept-card__header">
                 <div>
                   <span class="concept-number">02</span>
-                  <p>ARGILA</p>
+                  <p>COBRE URBANO</p>
                 </div>
-                <span class="concept-tone">Quente · Acolhedora</span>
+                <span class="concept-tone">Sólida · Acolhedora</span>
               </header>
 
               <div class="phone-frame">
-                <section class="login-preview login-preview--terracota" aria-label="Prévia do conceito Argila">
+                <section class="login-preview login-preview--terracota" aria-label="Prévia do conceito Cobre Urbano">
                   <header class="clay-topbar">
                     <span class="clay-mark"><img src="assets/brand/vp-logo.png" alt="VP Studio" /></span>
                     <span class="clay-support">Ajuda</span>
@@ -199,20 +199,22 @@
 
                   <div class="clay-message">
                     <span class="screen-label">VINICIUS PONTES STUDIO</span>
-                    <h2>Veja seu<br />próximo treino.</h2>
-                    <p>Agenda e acompanhamento sempre à mão.</p>
+                    <h2>Sua rotina<br />começa aqui.</h2>
+                    <p>Treino, agenda e acompanhamento sem distrações.</p>
                   </div>
 
                   <div class="clay-panel">
-                    <div class="role-cards" aria-label="Tipo de acesso">
-                      <span class="role-card is-active">
+                    <div class="role-cards" role="group" aria-label="Tipo de acesso">
+                      <button class="role-card is-active" type="button" data-preview-experience="terracota" data-preview-role="student" aria-pressed="true">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM5 20c.8-3.3 3.2-5 7-5s6.2 1.7 7 5" /></svg>
                         <b>Sou aluno</b>
-                      </span>
-                      <span class="role-card">
+                        <i aria-hidden="true">✓</i>
+                      </button>
+                      <button class="role-card" type="button" data-preview-experience="terracota" data-preview-role="coach" aria-pressed="false">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V8l8-4 8 4v11M8 19v-5h8v5" /></svg>
                         <b>Sou professor</b>
-                      </span>
+                        <i aria-hidden="true">✓</i>
+                      </button>
                     </div>
                     <label class="clay-field">
                       <span>E-mail ou celular</span>
@@ -229,9 +231,9 @@
                 </section>
               </div>
 
-              <p class="concept-description">Cinza quente e argila, com a escolha de perfil antes dos dados de acesso.</p>
+              <p class="concept-description">Concreto claro, grafite e cobre pontual, com controles sólidos e leitura imediata.</p>
               <button class="open-concept" type="button" data-experience-choice="terracota">
-                <span>Abrir conceito Argila</span>
+                <span>Abrir conceito Cobre Urbano</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
               </button>
             </article>
@@ -240,13 +242,13 @@
               <header class="concept-card__header">
                 <div>
                   <span class="concept-number">03</span>
-                  <p>SÁLVIA EDITORIAL</p>
+                  <p>ATLÂNTICO</p>
                 </div>
-                <span class="concept-tone">Marcante · Contida</span>
+                <span class="concept-tone">Precisa · Contemporânea</span>
               </header>
 
               <div class="phone-frame">
-                <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Sálvia Editorial">
+                <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Atlântico">
                   <header class="editorial-top">
                     <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
                     <span>ACESSO</span>
@@ -254,14 +256,14 @@
 
                   <div class="editorial-title">
                     <p>VINICIUS PONTES · STUDIO</p>
-                    <h2>Acesse sua<br />rotina no<br /><em>studio.</em></h2>
+                    <h2>Seu treino.<br />Seu ritmo.<br /><em>Seu studio.</em></h2>
                   </div>
 
                   <div class="editorial-access">
                     <span class="editorial-label">COMO VOCÊ QUER ENTRAR?</span>
-                    <div class="editorial-roles" aria-label="Tipo de acesso">
-                      <span class="is-active"><b>01</b> Área do aluno <i>→</i></span>
-                      <span><b>02</b> Área do professor <i>→</i></span>
+                    <div class="editorial-roles" role="group" aria-label="Tipo de acesso">
+                      <button class="is-active" type="button" data-preview-experience="editorial" data-preview-role="student" aria-pressed="true"><b>01</b> Área do aluno <i aria-hidden="true">✓</i></button>
+                      <button type="button" data-preview-experience="editorial" data-preview-role="coach" aria-pressed="false"><b>02</b> Área do professor <i aria-hidden="true">✓</i></button>
                     </div>
                     <label class="editorial-field">
                       <span>SEU ACESSO</span>
@@ -280,9 +282,9 @@
                 </section>
               </div>
 
-              <p class="concept-description">Tipografia marcante, acesso em etapas e sálvia usada somente nos destaques.</p>
+              <p class="concept-description">Cinza frio e azul profundo, com hierarquia clara e cartões contemporâneos.</p>
               <button class="open-concept" type="button" data-experience-choice="editorial">
-                <span>Abrir conceito Editorial</span>
+                <span>Abrir conceito Atlântico</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
               </button>
             </article>
@@ -332,7 +334,7 @@
           <div class="login-panel__body">
             <div class="login-heading">
               <span class="overline">ACESSO AO STUDIO</span>
-              <h2 id="login-title">Boas-vindas.</h2>
+              <h2 id="login-title" tabindex="-1">Boas-vindas.</h2>
               <p class="login-motto">Disciplina supera motivação.</p>
               <p class="login-instruction">Escolha seu perfil para continuar.</p>
             </div>
@@ -341,12 +343,18 @@
               <button class="role-selector__item is-active" type="button" data-access-role="student" aria-pressed="true">
                 <svg><use href="#icon-user"></use></svg>
                 <span><strong>Aluno</strong><small>Treinos e acompanhamento</small></span>
+                <span class="role-selector__state" aria-hidden="true"><svg><use href="#icon-check"></use></svg></span>
               </button>
               <button class="role-selector__item" type="button" data-access-role="coach" aria-pressed="false">
                 <svg><use href="#icon-users"></use></svg>
                 <span><strong>Professor</strong><small>Gestão do studio</small></span>
+                <span class="role-selector__state" aria-hidden="true"><svg><use href="#icon-check"></use></svg></span>
               </button>
             </div>
+            <p class="role-selection-summary" aria-live="polite">
+              <span>Perfil selecionado</span>
+              <strong id="selected-role-label">Aluno</strong>
+            </p>
 
             <form class="login-form" id="login-form">
               <label class="field">
@@ -361,7 +369,7 @@
                 </span>
               </label>
               <div class="login-help">
-                <label><input type="checkbox" checked /> <span>Manter acesso neste aparelho</span></label>
+                <label><input id="remember-profile" name="rememberProfile" type="checkbox" checked /> <span>Lembrar meu perfil neste aparelho</span></label>
                 <button type="button" class="text-button" data-toast="Confira o e-mail cadastrado para recuperar sua senha.">Esqueci a senha</button>
               </div>
               <button class="button button--primary button--full" type="submit">
@@ -1044,6 +1052,6 @@
       </div>
     </dialog>
 
-    <script type="module" src="app.js?v=9"></script>
+    <script type="module" src="app.js?v=11"></script>
   </body>
 </html>
