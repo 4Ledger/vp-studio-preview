@@ -1,0 +1,999 @@
+/*
+ * VP Studio experience layer
+ *
+ * Load this file after styles.css. The functional palettes used by readiness,
+ * pain, PSR and other data scales are intentionally not overridden here.
+ */
+
+html[data-experience] {
+  --experience-rail-width: var(--rail-width, 248px);
+  --experience-rail-bg: var(--surface-strong);
+  --experience-rail-fg: #f2f4f0;
+  --experience-rail-muted: rgb(255 255 255 / 58%);
+  --experience-rail-line: rgb(255 255 255 / 11%);
+  --experience-nav-hover: rgb(255 255 255 / 6%);
+  --experience-nav-active-bg: var(--accent-soft);
+  --experience-nav-active-fg: #ffffff;
+  --experience-nav-active-marker: var(--accent);
+  --experience-nav-radius: 10px;
+
+  --experience-header-bg: color-mix(in srgb, var(--canvas) 92%, transparent);
+  --experience-header-line: var(--line);
+  --experience-header-blur: 18px;
+
+  --experience-tabbar-bg: color-mix(in srgb, var(--surface) 95%, transparent);
+  --experience-tabbar-line: var(--line);
+  --experience-tabbar-shadow: 0 -12px 36px rgb(31 39 35 / 8%);
+  --experience-tab-active-bg: var(--accent-pale);
+  --experience-tab-active-fg: var(--accent-strong);
+  --experience-tab-radius: 10px;
+
+  --experience-control-radius: var(--radius-sm, 12px);
+  --experience-card-radius: var(--radius-md, 17px);
+  --experience-panel-radius: var(--radius-lg, 24px);
+  --experience-card-bg: var(--surface);
+  --experience-card-line: var(--line);
+  --experience-card-shadow: var(--shadow-sm);
+  --experience-raised-shadow: var(--shadow-md);
+
+  --experience-page-max: 1440px;
+  --experience-page-gap: clamp(20px, 2vw, 30px);
+  --experience-page-inline: clamp(20px, 4vw, 58px);
+  --experience-card-padding: clamp(18px, 2vw, 26px);
+  --experience-focus-ring: 0 0 0 3px color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+/* Mineral: cool steel, compact geometry and clear hierarchy. */
+
+html[data-experience="mineral"] {
+  color-scheme: light;
+  --font-display: "Bahnschrift", "Aptos Display", "Trebuchet MS", sans-serif;
+  --font-body: "Aptos", "Segoe UI Variable Text", "Calibri", sans-serif;
+
+  --canvas: #edf0f1;
+  --canvas-deep: #e2e7e9;
+  --surface: #f8f9f9;
+  --surface-raised: #ffffff;
+  --surface-muted: #e5eaec;
+  --surface-strong: #263740;
+  --surface-strong-2: #31444e;
+  --ink: #253139;
+  --ink-soft: #3d4b53;
+  --muted: #68767d;
+  --muted-2: #8a9499;
+  --line: #d2dade;
+  --line-strong: #bcc8cd;
+  --accent: #55778d;
+  --accent-strong: #3d6279;
+  --accent-soft: #dce7ed;
+  --accent-pale: #edf3f6;
+  --shadow-sm: 0 1px 2px rgb(35 49 57 / 5%), 0 7px 20px rgb(35 49 57 / 6%);
+  --shadow-md: 0 18px 48px rgb(35 49 57 / 14%);
+  --radius-xs: 6px;
+  --radius-sm: 9px;
+  --radius-md: 13px;
+  --radius-lg: 18px;
+  --rail-width: 250px;
+
+  --experience-rail-width: 250px;
+  --experience-rail-bg: #263740;
+  --experience-rail-fg: #f1f5f6;
+  --experience-rail-muted: #9eacb3;
+  --experience-rail-line: rgb(220 231 236 / 13%);
+  --experience-nav-hover: rgb(220 231 236 / 7%);
+  --experience-nav-active-bg: rgb(116 157 179 / 16%);
+  --experience-nav-active-fg: #f7fafb;
+  --experience-nav-active-marker: #85a9bb;
+  --experience-nav-radius: 8px;
+
+  --experience-header-bg: color-mix(in srgb, #edf0f1 94%, transparent);
+  --experience-header-line: #d2dade;
+  --experience-header-blur: 16px;
+
+  --experience-tabbar-bg: color-mix(in srgb, #f8f9f9 96%, transparent);
+  --experience-tabbar-line: #d2dade;
+  --experience-tabbar-shadow: 0 -10px 30px rgb(35 49 57 / 9%);
+  --experience-tab-active-bg: #e1eaee;
+  --experience-tab-active-fg: #365d73;
+  --experience-tab-radius: 8px;
+
+  --experience-control-radius: 9px;
+  --experience-card-radius: 13px;
+  --experience-panel-radius: 18px;
+  --experience-card-bg: #f8f9f9;
+  --experience-card-line: #d2dade;
+  --experience-card-shadow: 0 1px 2px rgb(35 49 57 / 4%), 0 7px 20px rgb(35 49 57 / 6%);
+  --experience-raised-shadow: 0 18px 48px rgb(35 49 57 / 14%);
+  --experience-page-max: 1480px;
+  --experience-page-gap: clamp(18px, 1.8vw, 26px);
+  --experience-card-padding: clamp(17px, 1.8vw, 24px);
+}
+
+html[data-experience="mineral"][data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #1d2529;
+  --canvas-deep: #171e22;
+  --surface: #242e33;
+  --surface-raised: #2a353a;
+  --surface-muted: #303c42;
+  --surface-strong: #121a1e;
+  --surface-strong-2: #26343b;
+  --ink: #eef2f3;
+  --ink-soft: #d1dade;
+  --muted: #a3b0b6;
+  --muted-2: #7f8d93;
+  --line: #3b494f;
+  --line-strong: #4c5d65;
+  --accent: #82a8bb;
+  --accent-strong: #a2bfcd;
+  --accent-soft: #2d424c;
+  --accent-pale: #263940;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 17%), 0 8px 22px rgb(0 0 0 / 15%);
+  --shadow-md: 0 20px 54px rgb(0 0 0 / 30%);
+
+  --experience-rail-bg: #121a1e;
+  --experience-rail-fg: #f0f4f5;
+  --experience-rail-muted: #91a0a7;
+  --experience-rail-line: rgb(213 229 236 / 11%);
+  --experience-nav-hover: rgb(213 229 236 / 7%);
+  --experience-nav-active-bg: rgb(122 169 190 / 17%);
+  --experience-nav-active-marker: #8fb5c7;
+  --experience-header-bg: color-mix(in srgb, #1d2529 94%, transparent);
+  --experience-header-line: #3b494f;
+  --experience-tabbar-bg: color-mix(in srgb, #242e33 96%, transparent);
+  --experience-tabbar-line: #3b494f;
+  --experience-tabbar-shadow: 0 -12px 32px rgb(0 0 0 / 24%);
+  --experience-tab-active-bg: #2d424c;
+  --experience-tab-active-fg: #b6cfda;
+  --experience-card-bg: #242e33;
+  --experience-card-line: #3b494f;
+  --experience-card-shadow: 0 1px 2px rgb(0 0 0 / 18%), 0 8px 22px rgb(0 0 0 / 15%);
+  --experience-raised-shadow: 0 20px 54px rgb(0 0 0 / 30%);
+}
+
+/* Terracotta: warm graphite, tactile panels and a stronger active state. */
+
+html[data-experience="terracota"] {
+  color-scheme: light;
+  --font-display: "Aptos Display", "Bahnschrift", "Trebuchet MS", sans-serif;
+  --font-body: "Aptos", "Segoe UI Variable Text", "Calibri", sans-serif;
+
+  --canvas: #eee9e2;
+  --canvas-deep: #e4ddd4;
+  --surface: #faf7f2;
+  --surface-raised: #fffdf9;
+  --surface-muted: #e9e1d8;
+  --surface-strong: #403b37;
+  --surface-strong-2: #4b4540;
+  --ink: #322f2c;
+  --ink-soft: #4b4540;
+  --muted: #746b64;
+  --muted-2: #948a82;
+  --line: #d9d0c6;
+  --line-strong: #c6b9ad;
+  --accent: #a35f47;
+  --accent-strong: #834832;
+  --accent-soft: #eeddd5;
+  --accent-pale: #f6ebe5;
+  --shadow-sm: 0 2px 4px rgb(64 53 45 / 5%), 0 10px 28px rgb(64 53 45 / 7%);
+  --shadow-md: 0 22px 58px rgb(64 53 45 / 15%);
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 19px;
+  --radius-lg: 26px;
+  --rail-width: 228px;
+
+  --experience-rail-width: 228px;
+  --experience-rail-bg: #403b37;
+  --experience-rail-fg: #fbf7f1;
+  --experience-rail-muted: #bdb1a7;
+  --experience-rail-line: rgb(246 235 225 / 13%);
+  --experience-nav-hover: rgb(246 235 225 / 7%);
+  --experience-nav-active-bg: #9b5a43;
+  --experience-nav-active-fg: #fffaf5;
+  --experience-nav-active-marker: transparent;
+  --experience-nav-radius: 13px;
+
+  --experience-header-bg: #eee9e2;
+  --experience-header-line: #d9d0c6;
+  --experience-header-blur: 0px;
+
+  --experience-tabbar-bg: #fffaf5;
+  --experience-tabbar-line: #d5c8bc;
+  --experience-tabbar-shadow: 0 14px 38px rgb(62 50 42 / 18%);
+  --experience-tab-active-bg: #edddd5;
+  --experience-tab-active-fg: #814630;
+  --experience-tab-radius: 13px;
+
+  --experience-control-radius: 12px;
+  --experience-card-radius: 19px;
+  --experience-panel-radius: 26px;
+  --experience-card-bg: #faf7f2;
+  --experience-card-line: #d9d0c6;
+  --experience-card-shadow: 0 2px 4px rgb(64 53 45 / 5%), 0 10px 28px rgb(64 53 45 / 7%);
+  --experience-raised-shadow: 0 22px 58px rgb(64 53 45 / 15%);
+  --experience-page-max: 1390px;
+  --experience-page-gap: clamp(20px, 2.2vw, 32px);
+  --experience-card-padding: clamp(20px, 2.2vw, 29px);
+}
+
+html[data-experience="terracota"][data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #24211f;
+  --canvas-deep: #1c1a18;
+  --surface: #2d2926;
+  --surface-raised: #35302c;
+  --surface-muted: #3c3631;
+  --surface-strong: #171513;
+  --surface-strong-2: #37322e;
+  --ink: #f2ede7;
+  --ink-soft: #d8d0c8;
+  --muted: #b2a79e;
+  --muted-2: #8e847c;
+  --line: #48413b;
+  --line-strong: #5b5149;
+  --accent: #cf8468;
+  --accent-strong: #e09a7f;
+  --accent-soft: #4a342d;
+  --accent-pale: #3d2e29;
+  --shadow-sm: 0 2px 4px rgb(0 0 0 / 18%), 0 10px 28px rgb(0 0 0 / 17%);
+  --shadow-md: 0 22px 60px rgb(0 0 0 / 34%);
+
+  --experience-rail-bg: #171513;
+  --experience-rail-fg: #f5efe9;
+  --experience-rail-muted: #a99d94;
+  --experience-rail-line: rgb(240 222 209 / 11%);
+  --experience-nav-hover: rgb(240 222 209 / 7%);
+  --experience-nav-active-bg: #9f5942;
+  --experience-nav-active-fg: #fffaf5;
+  --experience-header-bg: #24211f;
+  --experience-header-line: #48413b;
+  --experience-tabbar-bg: #302b27;
+  --experience-tabbar-line: #534a43;
+  --experience-tabbar-shadow: 0 15px 40px rgb(0 0 0 / 38%);
+  --experience-tab-active-bg: #4a342d;
+  --experience-tab-active-fg: #e9a189;
+  --experience-card-bg: #2d2926;
+  --experience-card-line: #48413b;
+  --experience-card-shadow: 0 2px 4px rgb(0 0 0 / 18%), 0 10px 28px rgb(0 0 0 / 17%);
+  --experience-raised-shadow: 0 22px 60px rgb(0 0 0 / 34%);
+}
+
+/* Editorial: neutral pages, sharp dividers and restrained sage cues. */
+
+html[data-experience="editorial"] {
+  color-scheme: light;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Aptos", "Segoe UI Variable Text", "Calibri", sans-serif;
+
+  --canvas: #eeeee9;
+  --canvas-deep: #e3e4dd;
+  --surface: #f8f8f4;
+  --surface-raised: #fdfdf9;
+  --surface-muted: #e7e8e1;
+  --surface-strong: #e1e3dc;
+  --surface-strong-2: #d7dad1;
+  --ink: #292e2a;
+  --ink-soft: #424943;
+  --muted: #6e766f;
+  --muted-2: #909790;
+  --line: #ced2ca;
+  --line-strong: #b9beb6;
+  --accent: #687c6a;
+  --accent-strong: #4f6653;
+  --accent-soft: #dfe6dc;
+  --accent-pale: #ecefe9;
+  --shadow-sm: none;
+  --shadow-md: 0 15px 38px rgb(37 45 39 / 9%);
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --rail-width: 216px;
+
+  --experience-rail-width: 216px;
+  --experience-rail-bg: #e1e3dc;
+  --experience-rail-fg: #29302b;
+  --experience-rail-muted: #6c756e;
+  --experience-rail-line: #c7cbc3;
+  --experience-nav-hover: rgb(79 102 83 / 6%);
+  --experience-nav-active-bg: transparent;
+  --experience-nav-active-fg: #29302b;
+  --experience-nav-active-marker: #596f5d;
+  --experience-nav-radius: 0px;
+
+  --experience-header-bg: #eeeee9;
+  --experience-header-line: #ced2ca;
+  --experience-header-blur: 0px;
+
+  --experience-tabbar-bg: #f8f8f4;
+  --experience-tabbar-line: #cbd0c8;
+  --experience-tabbar-shadow: none;
+  --experience-tab-active-bg: transparent;
+  --experience-tab-active-fg: #4f6653;
+  --experience-tab-radius: 0px;
+
+  --experience-control-radius: 3px;
+  --experience-card-radius: 4px;
+  --experience-panel-radius: 6px;
+  --experience-card-bg: #f8f8f4;
+  --experience-card-line: #ced2ca;
+  --experience-card-shadow: none;
+  --experience-raised-shadow: 0 15px 38px rgb(37 45 39 / 9%);
+  --experience-page-max: 1320px;
+  --experience-page-gap: clamp(24px, 2.5vw, 38px);
+  --experience-card-padding: clamp(20px, 2.4vw, 31px);
+}
+
+html[data-experience="editorial"][data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #20231f;
+  --canvas-deep: #191c18;
+  --surface: #282c27;
+  --surface-raised: #2e332d;
+  --surface-muted: #343a33;
+  --surface-strong: #292e28;
+  --surface-strong-2: #333a32;
+  --ink: #eef0eb;
+  --ink-soft: #d2d7d0;
+  --muted: #a8afa7;
+  --muted-2: #858d84;
+  --line: #41483f;
+  --line-strong: #535c51;
+  --accent: #91a492;
+  --accent-strong: #afbfaf;
+  --accent-soft: #364338;
+  --accent-pale: #303a31;
+  --shadow-sm: none;
+  --shadow-md: 0 16px 42px rgb(0 0 0 / 28%);
+
+  --experience-rail-bg: #292e28;
+  --experience-rail-fg: #edf0eb;
+  --experience-rail-muted: #a0aaa0;
+  --experience-rail-line: #41483f;
+  --experience-nav-hover: rgb(191 207 193 / 6%);
+  --experience-nav-active-bg: transparent;
+  --experience-nav-active-fg: #eef0eb;
+  --experience-nav-active-marker: #9aac9b;
+  --experience-header-bg: #20231f;
+  --experience-header-line: #41483f;
+  --experience-tabbar-bg: #282c27;
+  --experience-tabbar-line: #41483f;
+  --experience-tab-active-bg: transparent;
+  --experience-tab-active-fg: #b0c0b0;
+  --experience-card-bg: #282c27;
+  --experience-card-line: #41483f;
+  --experience-card-shadow: none;
+  --experience-raised-shadow: 0 16px 42px rgb(0 0 0 / 28%);
+}
+
+/* Shared component consumption */
+
+html[data-experience] body {
+  background: var(--canvas);
+  font-family: var(--font-body);
+}
+
+html[data-experience] :is(h1, h2, h3, h4, .workspace-title, .rail-context strong) {
+  font-family: var(--font-display);
+}
+
+html[data-experience] .workspace-shell.is-active {
+  grid-template-columns: var(--experience-rail-width) minmax(0, 1fr);
+}
+
+html[data-experience] .app-rail {
+  width: var(--experience-rail-width);
+  background: var(--experience-rail-bg);
+  color: var(--experience-rail-fg);
+}
+
+html[data-experience] .rail-context {
+  border-color: var(--experience-rail-line);
+}
+
+html[data-experience] .rail-context span,
+html[data-experience] .rail-context small,
+html[data-experience] :is(.rail-nav button, .rail-action) {
+  color: var(--experience-rail-muted);
+}
+
+html[data-experience] .rail-footer {
+  border-color: var(--experience-rail-line);
+}
+
+html[data-experience] :is(.rail-nav button, .rail-action) {
+  border-radius: var(--experience-nav-radius);
+}
+
+html[data-experience] :is(.rail-nav button, .rail-action):hover {
+  background: var(--experience-nav-hover);
+  color: var(--experience-rail-fg);
+}
+
+html[data-experience] .rail-nav button.is-active {
+  background: var(--experience-nav-active-bg);
+  box-shadow: inset 3px 0 0 var(--experience-nav-active-marker);
+  color: var(--experience-nav-active-fg);
+}
+
+html[data-experience] .rail-nav button.is-active svg {
+  color: var(--experience-nav-active-marker);
+}
+
+html[data-experience] .workspace-header {
+  border-color: var(--experience-header-line);
+  background: var(--experience-header-bg);
+  backdrop-filter: blur(var(--experience-header-blur));
+}
+
+html[data-experience] .workspace-content {
+  padding-right: var(--experience-page-inline);
+  padding-left: var(--experience-page-inline);
+}
+
+html[data-experience] .app-view {
+  width: min(100%, var(--experience-page-max));
+}
+
+html[data-experience] :is(
+  .card,
+  .wellness-hero,
+  .notice-card,
+  .student-table,
+  .agenda-card,
+  .workout-card,
+  .metric-strip,
+  .body-map-card,
+  .criteria-panel,
+  .workout-dialog,
+  .account-dialog
+) {
+  border-color: var(--experience-card-line);
+  border-radius: var(--experience-card-radius);
+  background-color: var(--experience-card-bg);
+  box-shadow: var(--experience-card-shadow);
+}
+
+html[data-experience] :is(
+  .button,
+  .icon-control,
+  .profile-chip,
+  .field input,
+  .field select,
+  .field textarea,
+  .search-field,
+  .period-select
+) {
+  border-radius: var(--experience-control-radius);
+}
+
+html[data-experience] :is(
+  button,
+  a,
+  input,
+  select,
+  textarea
+):focus-visible {
+  outline: none;
+  box-shadow: var(--experience-focus-ring);
+}
+
+html[data-experience] .mobile-tabbar {
+  border-color: var(--experience-tabbar-line);
+  background: var(--experience-tabbar-bg);
+  box-shadow: var(--experience-tabbar-shadow);
+}
+
+html[data-experience] .mobile-tabbar button {
+  border-radius: var(--experience-tab-radius);
+}
+
+html[data-experience] .mobile-tabbar button.is-active {
+  background: var(--experience-tab-active-bg);
+  color: var(--experience-tab-active-fg);
+}
+
+/* Login inherits the same experience rather than keeping a login-only theme. */
+
+html[data-experience] .login-panel {
+  background:
+    radial-gradient(circle at 92% 5%, var(--accent-pale), transparent 28%),
+    var(--surface);
+}
+
+html[data-experience] :is(.role-selector, .role-selector__item, .login-panel__body) {
+  border-radius: var(--experience-card-radius);
+}
+
+html[data-experience] .role-selector__item.is-active {
+  border-color: var(--experience-card-line);
+  background: var(--surface-raised);
+  box-shadow: var(--experience-card-shadow);
+}
+
+/* Mineral component character */
+
+html[data-experience="mineral"] .login-story {
+  background:
+    linear-gradient(150deg, rgb(255 255 255 / 6%) 0 36%, transparent 36%),
+    linear-gradient(28deg, #2c414d, #5b7482);
+}
+
+html[data-experience="mineral"] .login-story__copy {
+  align-self: center;
+  padding-left: clamp(20px, 6vw, 100px);
+  border-left: 2px solid #91b0c0;
+}
+
+html[data-experience="mineral"] .login-panel__body {
+  padding: 34px;
+  border: 1px solid var(--experience-card-line);
+  background: color-mix(in srgb, var(--surface-raised) 94%, transparent);
+  box-shadow: var(--experience-card-shadow);
+}
+
+html[data-experience="mineral"] .role-selector {
+  gap: 4px;
+  padding: 4px;
+  border: 0;
+  background: var(--surface-muted);
+}
+
+html[data-experience="mineral"] .role-selector__item {
+  min-height: 60px;
+}
+
+html[data-experience="mineral"] .app-rail {
+  background:
+    linear-gradient(150deg, transparent 58%, rgb(133 169 187 / 8%) 58%),
+    var(--experience-rail-bg);
+}
+
+html[data-experience="mineral"] .rail-brand {
+  border-radius: 8px;
+}
+
+html[data-experience="mineral"] .workspace-header {
+  min-height: 76px;
+}
+
+html[data-experience="mineral"] .card-header {
+  padding-bottom: 2px;
+}
+
+html[data-experience="mineral"] .wellness-hero {
+  background:
+    linear-gradient(112deg, rgb(133 169 187 / 19%), transparent 56%),
+    #263740;
+  color: #f5f8f9;
+}
+
+html[data-experience="mineral"] .environment-badge {
+  border-radius: 4px;
+}
+
+/* Terracotta component character */
+
+html[data-experience="terracota"] .login-screen {
+  grid-template-columns: minmax(480px, .88fr) minmax(520px, 1.12fr);
+}
+
+html[data-experience="terracota"] .login-story {
+  justify-content: center;
+  background:
+    linear-gradient(0deg, rgb(49 44 40 / 45%), rgb(49 44 40 / 45%)),
+    repeating-linear-gradient(90deg, #967060 0 1px, #615953 1px 92px);
+}
+
+html[data-experience="terracota"] .login-story__brand {
+  position: absolute;
+  top: clamp(30px, 5vw, 70px);
+}
+
+html[data-experience="terracota"] .login-story__status {
+  position: absolute;
+  bottom: clamp(30px, 5vw, 70px);
+}
+
+html[data-experience="terracota"] .login-panel__body {
+  width: min(100%, 540px);
+  padding: 40px;
+  border: 1px solid var(--experience-card-line);
+  border-top: 5px solid var(--accent);
+  background: var(--surface-raised);
+  box-shadow: var(--experience-raised-shadow);
+}
+
+html[data-experience="terracota"] .app-rail {
+  background:
+    linear-gradient(165deg, transparent 0 65%, rgb(207 132 104 / 8%) 65%),
+    var(--experience-rail-bg);
+}
+
+html[data-experience="terracota"] .rail-nav button.is-active {
+  box-shadow: none;
+}
+
+html[data-experience="terracota"] .rail-nav button.is-active svg {
+  color: currentColor;
+}
+
+html[data-experience="terracota"] .rail-brand {
+  border-radius: 15px;
+  box-shadow: 0 10px 24px rgb(25 20 17 / 18%);
+}
+
+html[data-experience="terracota"] .workspace-header {
+  min-height: 82px;
+}
+
+html[data-experience="terracota"] .page-intro h2 {
+  font-weight: 630;
+  letter-spacing: -.035em;
+}
+
+html[data-experience="terracota"] .wellness-hero {
+  border-left: 4px solid var(--accent);
+  background:
+    linear-gradient(115deg, rgb(207 132 104 / 17%), transparent 58%),
+    #403b37;
+  color: #fbf7f2;
+}
+
+html[data-experience="terracota"] .button--primary {
+  background: var(--accent-strong);
+}
+
+html[data-experience="terracota"] .environment-badge {
+  border-radius: 10px;
+}
+
+/* Editorial component character */
+
+html[data-experience="editorial"] .login-screen {
+  grid-template-columns: minmax(360px, .72fr) minmax(600px, 1.28fr);
+}
+
+html[data-experience="editorial"] .login-story {
+  background:
+    linear-gradient(165deg, transparent 0 58%, rgb(255 255 255 / 6%) 58%),
+    #626d62;
+}
+
+html[data-experience="editorial"] .login-panel__body {
+  width: min(100%, 620px);
+  margin-left: clamp(0px, 8vw, 140px);
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+html[data-experience="editorial"] .role-selector {
+  grid-template-columns: 1fr;
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+html[data-experience="editorial"] .role-selector__item {
+  min-height: 64px;
+  border-width: 0 0 1px;
+}
+
+html[data-experience="editorial"] .app-rail {
+  border-right: 1px solid var(--experience-rail-line);
+  background: var(--experience-rail-bg);
+}
+
+html[data-experience="editorial"] .rail-brand {
+  border: 1px solid var(--experience-rail-line);
+  border-radius: 0;
+  background: var(--surface-raised);
+}
+
+html[data-experience="editorial"] .rail-context strong {
+  color: var(--experience-rail-fg);
+}
+
+html[data-experience="editorial"] .rail-nav {
+  gap: 0;
+}
+
+html[data-experience="editorial"] .rail-nav button {
+  border-bottom: 1px solid var(--experience-rail-line);
+}
+
+html[data-experience="editorial"] .rail-nav button.is-active {
+  box-shadow: inset 3px 0 0 var(--experience-nav-active-marker);
+}
+
+html[data-experience="editorial"] .workspace-header {
+  min-height: 72px;
+}
+
+html[data-experience="editorial"] :is(.page-intro h2, .workspace-title h1) {
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+html[data-experience="editorial"] .overline,
+html[data-experience="editorial"] .card-kicker {
+  font-family: var(--font-body);
+  letter-spacing: .16em;
+}
+
+html[data-experience="editorial"] .card {
+  border-top-width: 2px;
+}
+
+html[data-experience="editorial"] .wellness-hero {
+  border-left: 3px solid var(--accent);
+  background:
+    linear-gradient(90deg, rgb(145 164 146 / 13%), transparent 48%),
+    #3d463f;
+  color: #f5f6f2;
+}
+
+html[data-experience="editorial"] :is(
+  .student-table,
+  .agenda-card,
+  .notice-card,
+  .builder-list article
+) {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+html[data-experience="editorial"] .button--primary {
+  border-radius: 0;
+  background: var(--accent-strong);
+}
+
+html[data-experience="editorial"] .environment-badge {
+  border-radius: 0;
+}
+
+@media (max-width: 900px) {
+  html[data-experience] .workspace-shell.is-active {
+    display: block;
+  }
+
+  html[data-experience] .workspace-content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  html[data-experience] .login-screen {
+    grid-template-columns: 1fr;
+  }
+
+  html[data-experience] .login-panel {
+    height: 100dvh;
+    min-height: 100dvh;
+    display: block;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+
+  html[data-experience] .login-panel__header {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    margin:
+      calc(-1 * max(16px, env(safe-area-inset-top)))
+      calc(-1 * clamp(18px, 6vw, 34px))
+      0;
+    padding:
+      max(16px, env(safe-area-inset-top))
+      clamp(18px, 6vw, 34px)
+      12px;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: blur(18px);
+  }
+
+  html[data-experience] .login-panel__body {
+    margin: clamp(24px, 6vh, 64px) auto 0;
+  }
+
+  html[data-experience="mineral"] .login-panel {
+    background:
+      linear-gradient(155deg, #e2e9ed 0 17%, transparent 17%),
+      var(--surface);
+  }
+
+  html[data-experience="mineral"] .login-panel__body {
+    width: min(100%, 500px);
+    margin-top: clamp(28px, 7vh, 72px);
+    padding: clamp(24px, 6vw, 34px);
+    border: 1px solid var(--experience-card-line);
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--surface-raised) 95%, transparent);
+    box-shadow: var(--experience-card-shadow);
+  }
+
+  html[data-experience="mineral"] .role-selector {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  html[data-experience="mineral"] .role-selector__item {
+    min-height: 52px;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  html[data-experience="mineral"] .role-selector__item svg,
+  html[data-experience="mineral"] .role-selector__item small {
+    display: none;
+  }
+
+  html[data-experience="mineral"][data-theme="dark"] .login-panel {
+    background:
+      linear-gradient(155deg, #2b3d46 0 17%, transparent 17%),
+      var(--surface);
+  }
+
+  html[data-experience="mineral"] .mobile-tabbar {
+    border-top-width: 1px;
+  }
+
+  html[data-experience="terracota"] .login-panel__body {
+    width: 100%;
+    margin: clamp(26px, 6vh, 60px) auto 0;
+    padding: 24px;
+  }
+
+  html[data-experience="terracota"] .login-panel {
+    background:
+      linear-gradient(150deg, var(--accent-pale) 0 22%, transparent 22%),
+      var(--surface);
+  }
+
+  html[data-experience="terracota"] .role-selector {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  html[data-experience="terracota"] .role-selector__item {
+    min-height: 84px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    border-color: var(--line);
+    background: var(--surface-muted);
+  }
+
+  html[data-experience="terracota"] .role-selector__item.is-active {
+    border-color: var(--accent);
+    background: var(--accent-pale);
+  }
+
+  html[data-experience="terracota"] .role-selector__item small {
+    display: none;
+  }
+
+  html[data-experience="terracota"] .workspace-content {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+
+  html[data-experience="terracota"] .mobile-tabbar {
+    right: 12px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    left: 12px;
+    height: 66px;
+    padding: 7px;
+    border: 1px solid var(--experience-tabbar-line);
+    border-radius: 18px;
+  }
+
+  html[data-experience="terracota"] .mobile-tabbar button {
+    border-radius: var(--experience-tab-radius);
+  }
+
+  html[data-experience="editorial"] .login-panel__body {
+    width: 100%;
+    margin: clamp(30px, 8vh, 76px) auto 0;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+
+  html[data-experience="editorial"] .login-panel {
+    background:
+      linear-gradient(90deg, transparent 20px, var(--line) 21px, transparent 22px),
+      var(--surface);
+  }
+
+  html[data-experience="editorial"] .login-heading h2 {
+    max-width: 330px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 0.98;
+  }
+
+  html[data-experience="editorial"] .role-selector {
+    gap: 0;
+    margin-top: 26px;
+  }
+
+  html[data-experience="editorial"] .role-selector__item {
+    min-height: 62px;
+    border-radius: 0;
+  }
+
+  html[data-experience="editorial"] :is(.field input, .field select, .field textarea, .field__password) {
+    border-radius: 0;
+  }
+
+  html[data-experience="editorial"] .workspace-content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  html[data-experience="editorial"] .mobile-tabbar {
+    border-top: 1px solid var(--experience-tabbar-line);
+  }
+
+  html[data-experience="editorial"] .mobile-tabbar button {
+    border-radius: 0;
+  }
+
+  html[data-experience="editorial"] .mobile-tabbar button.is-active {
+    box-shadow: inset 0 3px 0 var(--experience-nav-active-marker);
+  }
+
+  html[data-experience="editorial"] .page-intro h2 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+}
+
+@media (max-width: 390px) {
+  html[data-experience] .login-panel {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  html[data-experience] .login-panel__header {
+    margin-right: -16px;
+    margin-left: -16px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  html[data-experience="mineral"] .login-panel__body,
+  html[data-experience="terracota"] .login-panel__body {
+    padding: 20px;
+  }
+
+  html[data-experience] .login-heading h2 {
+    font-size: clamp(2rem, 10vw, 2.65rem);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  html[data-experience="mineral"] {
+    --experience-rail-width: 218px;
+  }
+
+  html[data-experience="terracota"] {
+    --experience-rail-width: 208px;
+  }
+
+  html[data-experience="editorial"] {
+    --experience-rail-width: 196px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-experience] *,
+  html[data-experience] *::before,
+  html[data-experience] *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

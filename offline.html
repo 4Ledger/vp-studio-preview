@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f2f0eb" />
+    <title>VP Studio | Sem conexão</title>
+    <style>
+      :root {
+        font-family: "Aptos", "Segoe UI Variable Text", sans-serif;
+        color: #252b28;
+        background: #f2f0eb;
+      }
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        padding: 24px;
+      }
+      main {
+        width: min(100%, 430px);
+        padding: 28px;
+        border: 1px solid #d8d5cd;
+        border-radius: 17px;
+        background: #fbfaf7;
+      }
+      img {
+        width: 90px;
+        height: 60px;
+        object-fit: contain;
+      }
+      h1 {
+        margin: 24px 0 10px;
+        font-family: "Bahnschrift", "Aptos Display", sans-serif;
+        font-size: 2rem;
+        line-height: 1.05;
+      }
+      p {
+        margin: 0;
+        color: #6b746f;
+        line-height: 1.55;
+      }
+      button {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 24px;
+        border: 0;
+        border-radius: 12px;
+        background: #29312e;
+        color: #fff;
+        font: 650 .92rem "Bahnschrift", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
+      <h1>Sem conexão no momento.</h1>
+      <p>A demonstração básica continua disponível, mas dados compartilhados exigirão acesso à internet no ambiente de homologação.</p>
+      <button type="button" onclick="location.reload()">Tentar novamente</button>
+    </main>
+  </body>
+</html>

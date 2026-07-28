@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Três direções alternativas para a tela de acesso do aplicativo VP Studio."
+    />
+    <title>VP Studio | Alternativas de acesso</title>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("vp-studio-theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="login-options.css" />
+  </head>
+  <body>
+    <main class="concept-page">
+      <header class="concept-header">
+        <a class="back-link" href="index.html" aria-label="Voltar à demonstração principal">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m15 5-7 7 7 7" />
+          </svg>
+          Demonstração principal
+        </a>
+
+        <div class="concept-heading">
+          <p class="kicker">VP STUDIO · ESTUDO DE DIREÇÃO</p>
+          <h1>Compare três opções para a <em>tela de acesso.</em></h1>
+          <p>Todas incluem entrada do aluno, entrada do professor e criação de conta.</p>
+        </div>
+
+        <aside class="review-note">
+          <span>COMO AVALIAR</span>
+          <p>Compare legibilidade, cores e organização. Depois, abra cada opção em tela cheia.</p>
+        </aside>
+      </header>
+
+      <section class="concept-grid" aria-label="Alternativas para a tela de login">
+        <article class="concept-card concept-card--mineral">
+          <header class="concept-card__header">
+            <div>
+              <span class="concept-number">01</span>
+              <p>AZUL MINERAL</p>
+            </div>
+            <span class="concept-tone">Direta · Discreta</span>
+          </header>
+
+          <div class="phone-frame">
+            <section class="login-preview login-preview--mineral" aria-label="Prévia do conceito Azul Mineral">
+              <header class="mineral-brand">
+                <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
+                <span><strong>VINICIUS PONTES</strong><small>STUDIO</small></span>
+              </header>
+
+              <div class="mineral-intro">
+                <span class="screen-label">SEU ACOMPANHAMENTO</span>
+                <h2>Bom ter você<br />por aqui.</h2>
+                <p>Entre para acompanhar seu treino e sua evolução.</p>
+              </div>
+
+              <div class="mineral-form">
+                <div class="role-segment" aria-label="Tipo de acesso">
+                  <span class="is-active">Aluno</span>
+                  <span>Professor</span>
+                </div>
+
+                <label class="preview-field">
+                  <span>E-mail ou celular</span>
+                  <span class="input-surface">carolina@exemplo.com</span>
+                </label>
+                <label class="preview-field">
+                  <span>Senha</span>
+                  <span class="input-surface input-surface--password">•••••••• <b>Exibir</b></span>
+                </label>
+
+                <div class="form-assist">
+                  <span>Manter conectado</span>
+                  <span>Esqueci a senha</span>
+                </div>
+
+                <span class="preview-primary">Entrar <b aria-hidden="true">→</b></span>
+                <span class="preview-secondary">Criar minha conta</span>
+              </div>
+
+              <footer class="preview-footer">Privacidade e segurança · VP Studio</footer>
+            </section>
+          </div>
+
+          <p class="concept-description">Entrada direta, cores frias e informações organizadas em um único painel.</p>
+          <a class="open-concept" href="index.html?experience=mineral">
+            Abrir conceito Mineral
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
+          </a>
+        </article>
+
+        <article class="concept-card concept-card--terracota">
+          <header class="concept-card__header">
+            <div>
+              <span class="concept-number">02</span>
+              <p>ARGILA</p>
+            </div>
+            <span class="concept-tone">Quente · Acolhedora</span>
+          </header>
+
+          <div class="phone-frame">
+            <section class="login-preview login-preview--terracota" aria-label="Prévia do conceito Argila">
+              <header class="clay-topbar">
+                <span class="clay-mark"><img src="assets/brand/vp-logo.png" alt="VP Studio" /></span>
+                <span class="clay-support">Ajuda</span>
+              </header>
+
+              <div class="clay-message">
+                <span class="screen-label">VINICIUS PONTES STUDIO</span>
+                <h2>Veja seu<br />próximo treino.</h2>
+                <p>Agenda e acompanhamento sempre à mão.</p>
+              </div>
+
+              <div class="clay-panel">
+                <div class="role-cards" aria-label="Tipo de acesso">
+                  <span class="role-card is-active">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM5 20c.8-3.3 3.2-5 7-5s6.2 1.7 7 5" /></svg>
+                    <b>Sou aluno</b>
+                  </span>
+                  <span class="role-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V8l8-4 8 4v11M8 19v-5h8v5" /></svg>
+                    <b>Sou professor</b>
+                  </span>
+                </div>
+
+                <label class="clay-field">
+                  <span>E-mail ou celular</span>
+                  <span class="clay-input">Digite seu acesso</span>
+                </label>
+                <label class="clay-field">
+                  <span>Senha</span>
+                  <span class="clay-input clay-input--password">Sua senha <b>Exibir</b></span>
+                </label>
+
+                <span class="clay-forgot">Esqueci minha senha</span>
+                <span class="clay-primary">Continuar <b aria-hidden="true">→</b></span>
+
+                <p class="clay-account">Primeira vez por aqui? <strong>Criar conta</strong></p>
+              </div>
+            </section>
+          </div>
+
+          <p class="concept-description">Cinza quente e argila, com a escolha de perfil antes dos dados de acesso.</p>
+          <a class="open-concept" href="index.html?experience=terracota">
+            Abrir conceito Argila
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
+          </a>
+        </article>
+
+        <article class="concept-card concept-card--editorial">
+          <header class="concept-card__header">
+            <div>
+              <span class="concept-number">03</span>
+              <p>SÁLVIA EDITORIAL</p>
+            </div>
+            <span class="concept-tone">Marcante · Contida</span>
+          </header>
+
+          <div class="phone-frame">
+            <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Sálvia Editorial">
+              <header class="editorial-top">
+                <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
+                <span>ACESSO</span>
+              </header>
+
+              <div class="editorial-title">
+                <p>VINICIUS PONTES · STUDIO</p>
+                <h2>Acesse sua<br />rotina no<br /><em>studio.</em></h2>
+              </div>
+
+              <div class="editorial-access">
+                <span class="editorial-label">COMO VOCÊ QUER ENTRAR?</span>
+                <div class="editorial-roles" aria-label="Tipo de acesso">
+                  <span class="is-active"><b>01</b> Área do aluno <i>→</i></span>
+                  <span><b>02</b> Área do professor <i>→</i></span>
+                </div>
+
+                <label class="editorial-field">
+                  <span>SEU ACESSO</span>
+                  <span class="editorial-input">E-mail ou celular</span>
+                </label>
+                <label class="editorial-field">
+                  <span>SUA SENHA</span>
+                  <span class="editorial-input editorial-input--password">•••••••• <b>Exibir</b></span>
+                </label>
+
+                <span class="editorial-primary">Entrar no studio</span>
+                <div class="editorial-links">
+                  <span>Criar conta</span>
+                  <span>Recuperar senha</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <p class="concept-description">Tipografia marcante, acesso em etapas e sálvia usada somente nos destaques.</p>
+          <a class="open-concept" href="index.html?experience=editorial">
+            Abrir conceito Editorial
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
+          </a>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        <img src="assets/brand/vp-logo-gradient.png" alt="" />
+        <p>Material comparativo para definição da direção visual. Dados e acessos são demonstrativos.</p>
+      </footer>
+    </main>
+  </body>
+</html>
