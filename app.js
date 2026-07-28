@@ -1,4 +1,4 @@
-import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=11";
+import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=12";
 
 const icon = (name) => `<svg aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 
@@ -301,9 +301,7 @@ function chooseExperience(experience) {
   experienceScreen.hidden = true;
   experienceScreen.classList.remove("is-active");
   if (state.experienceReturn === "workspace") {
-    workspaceShell.hidden = false;
-    workspaceShell.classList.add("is-active");
-    window.scrollTo({ top: 0, behavior: "auto" });
+    enterWorkspace("home");
     return;
   }
   showLoginScreen();
