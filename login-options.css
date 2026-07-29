@@ -15,7 +15,7 @@
 }
 
 html {
-  min-width: 320px;
+  min-width: 0;
   background: var(--page-bg);
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 body.is-choosing-experience {
-  min-width: 320px;
+  min-width: 0;
   overflow-x: hidden;
 }
 
@@ -234,6 +234,18 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
   border-radius: 30px;
   background: var(--page-surface);
   box-shadow: var(--page-shadow);
+}
+
+.concept-card--editorial {
+  order: 1;
+}
+
+.concept-card--mineral {
+  order: 2;
+}
+
+.concept-card--terracota {
+  order: 3;
 }
 
 .concept-card:has(.open-concept.is-selected) {
@@ -968,6 +980,57 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
   color: var(--page-muted);
   font-size: 0.7rem;
   line-height: 1.4;
+}
+
+@media (max-width: 719px) {
+  .concept-page {
+    padding: 20px 12px 28px;
+  }
+
+  .concept-header {
+    gap: 26px;
+    padding-bottom: 28px;
+  }
+
+  .concept-heading h1 {
+    font-size: clamp(2.35rem, 13vw, 3.45rem);
+  }
+
+  .concept-grid {
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .concept-card {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .phone-frame {
+    position: relative;
+    height: 428px;
+    max-width: 260px;
+  }
+
+  .login-preview {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 172.414%;
+    height: 714px;
+    min-height: 714px;
+    transform: scale(.58);
+    transform-origin: top left;
+  }
+
+  .concept-description {
+    min-height: 0;
+    margin-top: 16px;
+  }
+
+  .page-footer {
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: 720px) {

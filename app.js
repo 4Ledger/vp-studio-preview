@@ -1,4 +1,4 @@
-import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=12";
+import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=13";
 
 const icon = (name) => `<svg aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 
@@ -143,7 +143,7 @@ const persistedTodayCheckin = todayCheckin();
 const persistedAnswers = copyAnswers(persistedTodayCheckin?.answers);
 
 const state = {
-  experience: "mineral",
+  experience: "editorial",
   experienceReturn: "login",
   role: "student",
   activeRoute: "home",
@@ -190,12 +190,12 @@ const experienceLoginCopy = {
   terracota: {
     eyebrow: "ACESSO AO STUDIO",
     title: "Sua rotina começa aqui.",
-    instruction: "Treino, agenda e acompanhamento sem distrações.",
+    instruction: "Sua rotina de treinos em um só lugar.",
   },
   editorial: {
     eyebrow: "VP STUDIO · ACESSO",
     title: "Seu treino. Seu ritmo.",
-    instruction: "Escolha o perfil e continue para o studio.",
+    instruction: "Entre como aluno ou professor.",
   },
 };
 
@@ -230,8 +230,7 @@ function setTheme(theme) {
 
 function initialiseTheme() {
   const stored = localStorage.getItem("vp-studio-theme");
-  const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  setTheme(stored || preferred);
+  setTheme(stored || "dark");
 }
 
 function updateThemeColor() {
@@ -241,7 +240,7 @@ function updateThemeColor() {
     terracota: dark ? "#171b1a" : "#f1f1ee",
     editorial: dark ? "#14232c" : "#edf1f3",
   };
-  document.querySelector('meta[name="theme-color"]').content = colors[state.experience] || colors.mineral;
+  document.querySelector('meta[name="theme-color"]').content = colors[state.experience] || colors.editorial;
 }
 
 function setExperience(experience, options = {}) {
@@ -259,7 +258,7 @@ function setExperience(experience, options = {}) {
     button.setAttribute("aria-pressed", String(active));
   });
   document.querySelector("#account-experience").textContent = `${experienceNames[experience]} selecionado`;
-  if (options.persist !== false) localStorage.setItem("vp-experience", experience);
+  if (options.persist !== false) localStorage.setItem("vp-experience-v13", experience);
   updateThemeColor();
 }
 
@@ -326,8 +325,8 @@ function syncAccessRoleQuery(role) {
 function initialiseExperience() {
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("experience") || params.get("login");
-  const stored = localStorage.getItem("vp-experience");
-  const initial = experienceNames[requested] ? requested : (experienceNames[stored] ? stored : "mineral");
+  const stored = localStorage.getItem("vp-experience-v13");
+  const initial = experienceNames[requested] ? requested : (experienceNames[stored] ? stored : "editorial");
   setExperience(initial, { persist: Boolean(requested || stored) });
   if (experienceNames[requested]) showLoginScreen();
   else showExperiencePicker("login");
@@ -411,6 +410,12 @@ function setRoute(route, options = {}) {
   if (view === "wellness" && options.resetWellness !== false) {
     state.wellnessIndex = 0;
     renderWellness();
+  }
+
+  if (view === "coach-agenda" && window.matchMedia("(max-width: 900px)").matches) {
+    const calendar = document.querySelector("#coach-calendar");
+    const today = calendar?.querySelector(".is-today");
+    if (calendar && today) calendar.scrollTo({ left: Math.max(0, today.offsetLeft - 54), behavior: "auto" });
   }
 
   document.querySelector(".workspace-content").scrollTo({ top: 0, behavior: options.instant ? "auto" : "smooth" });

@@ -10,10 +10,9 @@
     <title>VP Studio | Alternativas de acesso</title>
     <script>
       document.documentElement.dataset.theme =
-        localStorage.getItem("vp-studio-theme") ||
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        localStorage.getItem("vp-studio-theme") || "dark";
     </script>
-    <link rel="stylesheet" href="login-options.css?v=12" />
+    <link rel="stylesheet" href="login-options.css?v=13" />
   </head>
   <body>
     <main class="concept-page">
@@ -26,22 +25,75 @@
         </a>
 
         <div class="concept-heading">
-          <p class="kicker">VP STUDIO · ESTUDO DE DIREÇÃO</p>
-          <h1>Compare três opções para a <em>tela de acesso.</em></h1>
-          <p>Todas incluem entrada do aluno, entrada do professor e criação de conta.</p>
+          <p class="kicker">ESCOLHA SEU VISUAL</p>
+          <h1>Qual experiência combina mais com o <em>VP Studio?</em></h1>
+          <p>Toque em uma opção para conhecer e entrar.</p>
         </div>
 
         <aside class="review-note">
-          <span>COMO AVALIAR</span>
-          <p>Compare legibilidade, cores e organização. Depois, abra cada opção em tela cheia.</p>
+          <span>VOCÊ DECIDE</span>
+          <p>O visual pode ser trocado depois, sem perder seu acesso.</p>
         </aside>
       </header>
 
       <section class="concept-grid" aria-label="Alternativas para a tela de login">
-        <article class="concept-card concept-card--mineral">
+        <article class="concept-card concept-card--editorial">
           <header class="concept-card__header">
             <div>
               <span class="concept-number">01</span>
+              <p>ATLÂNTICO</p>
+            </div>
+            <span class="concept-tone">Precisa · Contemporânea</span>
+          </header>
+
+          <div class="phone-frame">
+            <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Atlântico">
+              <header class="editorial-top">
+                <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
+                <span>ACESSO</span>
+              </header>
+
+              <div class="editorial-title">
+                <p>VINICIUS PONTES · STUDIO</p>
+                <h2>Seu treino.<br />Seu ritmo.<br /><em>Seu studio.</em></h2>
+              </div>
+
+              <div class="editorial-access">
+                <span class="editorial-label">COMO VOCÊ QUER ENTRAR?</span>
+                <div class="editorial-roles" role="group" aria-label="Tipo de acesso">
+                  <button class="is-active" type="button" data-preview-experience="editorial" data-preview-role="student" aria-pressed="true"><b>01</b> Área do aluno <i aria-hidden="true">✓</i></button>
+                  <button type="button" data-preview-experience="editorial" data-preview-role="coach" aria-pressed="false"><b>02</b> Área do professor <i aria-hidden="true">✓</i></button>
+                </div>
+
+                <label class="editorial-field">
+                  <span>SEU ACESSO</span>
+                  <span class="editorial-input">E-mail ou celular</span>
+                </label>
+                <label class="editorial-field">
+                  <span>SUA SENHA</span>
+                  <span class="editorial-input editorial-input--password">•••••••• <b>Exibir</b></span>
+                </label>
+
+                <span class="editorial-primary">Entrar no studio</span>
+                <div class="editorial-links">
+                  <span>Criar conta</span>
+                  <span>Recuperar senha</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <p class="concept-description">Atual, sóbrio e organizado.</p>
+          <a class="open-concept" href="index.html?experience=editorial">
+            Abrir conceito Atlântico
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
+          </a>
+        </article>
+
+        <article class="concept-card concept-card--mineral">
+          <header class="concept-card__header">
+            <div>
+              <span class="concept-number">02</span>
               <p>AZUL MINERAL</p>
             </div>
             <span class="concept-tone">Direta · Discreta</span>
@@ -88,7 +140,7 @@
             </section>
           </div>
 
-          <p class="concept-description">Entrada direta, cores frias e informações organizadas em um único painel.</p>
+          <p class="concept-description">Simples, claro e fácil de usar.</p>
           <a class="open-concept" href="index.html?experience=mineral">
             Abrir conceito Mineral
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
@@ -98,7 +150,7 @@
         <article class="concept-card concept-card--terracota">
           <header class="concept-card__header">
             <div>
-              <span class="concept-number">02</span>
+              <span class="concept-number">03</span>
               <p>COBRE URBANO</p>
             </div>
             <span class="concept-tone">Sólida · Acolhedora</span>
@@ -114,7 +166,7 @@
               <div class="clay-message">
                 <span class="screen-label">VINICIUS PONTES STUDIO</span>
                 <h2>Sua rotina<br />começa aqui.</h2>
-                <p>Treino, agenda e acompanhamento sem distrações.</p>
+                <p>Sua rotina de treinos em um só lugar.</p>
               </div>
 
               <div class="clay-panel">
@@ -148,70 +200,18 @@
             </section>
           </div>
 
-          <p class="concept-description">Concreto claro, grafite e cobre pontual, com controles sólidos e leitura imediata.</p>
+          <p class="concept-description">Acolhedor, sólido e direto.</p>
           <a class="open-concept" href="index.html?experience=terracota">
             Abrir conceito Cobre Urbano
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
           </a>
         </article>
 
-        <article class="concept-card concept-card--editorial">
-          <header class="concept-card__header">
-            <div>
-              <span class="concept-number">03</span>
-              <p>ATLÂNTICO</p>
-            </div>
-            <span class="concept-tone">Precisa · Contemporânea</span>
-          </header>
-
-          <div class="phone-frame">
-            <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Atlântico">
-              <header class="editorial-top">
-                <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
-                <span>ACESSO</span>
-              </header>
-
-              <div class="editorial-title">
-                <p>VINICIUS PONTES · STUDIO</p>
-                <h2>Seu treino.<br />Seu ritmo.<br /><em>Seu studio.</em></h2>
-              </div>
-
-              <div class="editorial-access">
-                <span class="editorial-label">COMO VOCÊ QUER ENTRAR?</span>
-                <div class="editorial-roles" role="group" aria-label="Tipo de acesso">
-                  <button class="is-active" type="button" data-preview-experience="editorial" data-preview-role="student" aria-pressed="true"><b>01</b> Área do aluno <i aria-hidden="true">✓</i></button>
-                  <button type="button" data-preview-experience="editorial" data-preview-role="coach" aria-pressed="false"><b>02</b> Área do professor <i aria-hidden="true">✓</i></button>
-                </div>
-
-                <label class="editorial-field">
-                  <span>SEU ACESSO</span>
-                  <span class="editorial-input">E-mail ou celular</span>
-                </label>
-                <label class="editorial-field">
-                  <span>SUA SENHA</span>
-                  <span class="editorial-input editorial-input--password">•••••••• <b>Exibir</b></span>
-                </label>
-
-                <span class="editorial-primary">Entrar no studio</span>
-                <div class="editorial-links">
-                  <span>Criar conta</span>
-                  <span>Recuperar senha</span>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <p class="concept-description">Cinza frio e azul profundo, com hierarquia clara e cartões contemporâneos.</p>
-          <a class="open-concept" href="index.html?experience=editorial">
-            Abrir conceito Atlântico
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
-          </a>
-        </article>
       </section>
 
       <footer class="page-footer">
         <img src="assets/brand/vp-logo-gradient.png" alt="" />
-        <p>Material comparativo para definição da direção visual. Dados e acessos são demonstrativos.</p>
+        <p>Escolha uma opção para continuar. Os dados desta demonstração são fictícios.</p>
       </footer>
     </main>
     <script>

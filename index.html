@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="pt-BR" data-experience="mineral">
+<html lang="pt-BR" data-experience="editorial" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#f2f0eb" />
+    <meta name="theme-color" content="#14232c" />
     <meta name="description" content="Aplicativo de homologação do Vinicius Pontes Studio." />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="VP Studio" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
-    <link rel="stylesheet" href="styles.css?v=12" />
-    <link rel="stylesheet" href="experience-tokens.css?v=12" />
-    <link rel="stylesheet" href="login-options.css?v=12" id="experience-picker-styles" />
+    <link rel="stylesheet" href="styles.css?v=13" />
+    <link rel="stylesheet" href="experience-tokens.css?v=13" />
+    <link rel="stylesheet" href="login-options.css?v=13" id="experience-picker-styles" />
     <title>VP Studio</title>
   </head>
   <body>
@@ -115,22 +115,73 @@
             </div>
 
             <div class="concept-heading">
-              <p class="kicker">VP STUDIO · ESTUDO DE DIREÇÃO</p>
-              <h1 id="experience-title">Compare três opções para a <em>tela de acesso.</em></h1>
-              <p>Cada opção define o acesso e a identidade dos painéis do aluno e do professor.</p>
+              <p class="kicker">ESCOLHA SEU VISUAL</p>
+              <h1 id="experience-title">Qual experiência combina mais com o <em>VP Studio?</em></h1>
+              <p>Toque em uma opção para conhecer e entrar.</p>
             </div>
 
             <aside class="review-note">
-              <span>COMO AVALIAR</span>
-              <p>Compare a legibilidade, as cores e a organização. Toque em uma opção para continuar.</p>
+              <span>VOCÊ DECIDE</span>
+              <p>O visual pode ser trocado depois, sem perder seu acesso.</p>
             </aside>
           </header>
 
           <section class="concept-grid" aria-label="Alternativas para a tela de acesso">
-            <article class="concept-card concept-card--mineral">
+            <article class="concept-card concept-card--editorial">
               <header class="concept-card__header">
                 <div>
                   <span class="concept-number">01</span>
+                  <p>ATLÂNTICO</p>
+                </div>
+                <span class="concept-tone">Precisa · Contemporânea</span>
+              </header>
+
+              <div class="phone-frame">
+                <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Atlântico">
+                  <header class="editorial-top">
+                    <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
+                    <span>ACESSO</span>
+                  </header>
+
+                  <div class="editorial-title">
+                    <p>VINICIUS PONTES · STUDIO</p>
+                    <h2>Seu treino.<br />Seu ritmo.<br /><em>Seu studio.</em></h2>
+                  </div>
+
+                  <div class="editorial-access">
+                    <span class="editorial-label">COMO VOCÊ QUER ENTRAR?</span>
+                    <div class="editorial-roles" role="group" aria-label="Tipo de acesso">
+                      <button class="is-active" type="button" data-preview-experience="editorial" data-preview-role="student" aria-pressed="true"><b>01</b> Área do aluno <i aria-hidden="true">✓</i></button>
+                      <button type="button" data-preview-experience="editorial" data-preview-role="coach" aria-pressed="false"><b>02</b> Área do professor <i aria-hidden="true">✓</i></button>
+                    </div>
+                    <label class="editorial-field">
+                      <span>SEU ACESSO</span>
+                      <span class="editorial-input">E-mail ou celular</span>
+                    </label>
+                    <label class="editorial-field">
+                      <span>SUA SENHA</span>
+                      <span class="editorial-input editorial-input--password">•••••••• <b>Exibir</b></span>
+                    </label>
+                    <span class="editorial-primary">Entrar no studio</span>
+                    <div class="editorial-links">
+                      <span>Criar conta</span>
+                      <span>Recuperar senha</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <p class="concept-description">Atual, sóbrio e organizado.</p>
+              <button class="open-concept" type="button" data-experience-choice="editorial">
+                <span>Abrir conceito Atlântico</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
+              </button>
+            </article>
+
+            <article class="concept-card concept-card--mineral">
+              <header class="concept-card__header">
+                <div>
+                  <span class="concept-number">02</span>
                   <p>AZUL MINERAL</p>
                 </div>
                 <span class="concept-tone">Direta · Discreta</span>
@@ -174,7 +225,7 @@
                 </section>
               </div>
 
-              <p class="concept-description">Entrada direta, cores frias e informações organizadas em um único painel.</p>
+              <p class="concept-description">Simples, claro e fácil de usar.</p>
               <button class="open-concept" type="button" data-experience-choice="mineral">
                 <span>Abrir conceito Mineral</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
@@ -184,7 +235,7 @@
             <article class="concept-card concept-card--terracota">
               <header class="concept-card__header">
                 <div>
-                  <span class="concept-number">02</span>
+                  <span class="concept-number">03</span>
                   <p>COBRE URBANO</p>
                 </div>
                 <span class="concept-tone">Sólida · Acolhedora</span>
@@ -200,7 +251,7 @@
                   <div class="clay-message">
                     <span class="screen-label">VINICIUS PONTES STUDIO</span>
                     <h2>Sua rotina<br />começa aqui.</h2>
-                    <p>Treino, agenda e acompanhamento sem distrações.</p>
+                    <p>Sua rotina de treinos em um só lugar.</p>
                   </div>
 
                   <div class="clay-panel">
@@ -231,68 +282,18 @@
                 </section>
               </div>
 
-              <p class="concept-description">Concreto claro, grafite e cobre pontual, com controles sólidos e leitura imediata.</p>
+              <p class="concept-description">Acolhedor, sólido e direto.</p>
               <button class="open-concept" type="button" data-experience-choice="terracota">
                 <span>Abrir conceito Cobre Urbano</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
               </button>
             </article>
 
-            <article class="concept-card concept-card--editorial">
-              <header class="concept-card__header">
-                <div>
-                  <span class="concept-number">03</span>
-                  <p>ATLÂNTICO</p>
-                </div>
-                <span class="concept-tone">Precisa · Contemporânea</span>
-              </header>
-
-              <div class="phone-frame">
-                <section class="login-preview login-preview--editorial" aria-label="Prévia do conceito Atlântico">
-                  <header class="editorial-top">
-                    <img src="assets/brand/vp-logo-gradient.png" alt="VP Studio" />
-                    <span>ACESSO</span>
-                  </header>
-
-                  <div class="editorial-title">
-                    <p>VINICIUS PONTES · STUDIO</p>
-                    <h2>Seu treino.<br />Seu ritmo.<br /><em>Seu studio.</em></h2>
-                  </div>
-
-                  <div class="editorial-access">
-                    <span class="editorial-label">COMO VOCÊ QUER ENTRAR?</span>
-                    <div class="editorial-roles" role="group" aria-label="Tipo de acesso">
-                      <button class="is-active" type="button" data-preview-experience="editorial" data-preview-role="student" aria-pressed="true"><b>01</b> Área do aluno <i aria-hidden="true">✓</i></button>
-                      <button type="button" data-preview-experience="editorial" data-preview-role="coach" aria-pressed="false"><b>02</b> Área do professor <i aria-hidden="true">✓</i></button>
-                    </div>
-                    <label class="editorial-field">
-                      <span>SEU ACESSO</span>
-                      <span class="editorial-input">E-mail ou celular</span>
-                    </label>
-                    <label class="editorial-field">
-                      <span>SUA SENHA</span>
-                      <span class="editorial-input editorial-input--password">•••••••• <b>Exibir</b></span>
-                    </label>
-                    <span class="editorial-primary">Entrar no studio</span>
-                    <div class="editorial-links">
-                      <span>Criar conta</span>
-                      <span>Recuperar senha</span>
-                    </div>
-                  </div>
-                </section>
-              </div>
-
-              <p class="concept-description">Cinza frio e azul profundo, com hierarquia clara e cartões contemporâneos.</p>
-              <button class="open-concept" type="button" data-experience-choice="editorial">
-                <span>Abrir conceito Atlântico</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M9 6h9v9" /></svg>
-              </button>
-            </article>
           </section>
 
           <footer class="page-footer">
             <img src="assets/brand/vp-logo-gradient.png" alt="" />
-            <p>Material comparativo para definição da direção visual. Dados e acessos são demonstrativos.</p>
+            <p>Escolha uma opção para continuar. Os dados desta demonstração são fictícios.</p>
           </footer>
         </div>
       </section>
@@ -446,7 +447,7 @@
                 <div>
                   <span class="overline">TERÇA, 28 DE JULHO</span>
                   <h2>Bom dia, Carolina.</h2>
-                  <p class="daily-line">“Técnica primeiro. Carga depois.”</p>
+                  <p class="daily-line">Técnica primeiro. Carga depois.</p>
                 </div>
                 <button class="button button--secondary desktop-only" type="button" data-route="agenda">
                   Ver agenda
@@ -478,10 +479,10 @@
                   </header>
                   <div class="session-time">
                     <strong>18:30</strong>
-                    <span><b>Hoje</b><small>Treino acompanhado</small></span>
+                    <span><b>Hoje</b><small>Treino individual</small></span>
                   </div>
                   <div class="session-meta">
-                    <span>Grupo de força</span>
+                    <span>Vinicius Pontes</span>
                     <span>50 min</span>
                   </div>
                   <button class="card-link" type="button" data-route="agenda">
@@ -514,7 +515,7 @@
                   </header>
                   <strong>Mensalidade vence em 3 dias</strong>
                   <p>Vencimento em 31 de julho.</p>
-                  <button class="card-link" type="button" data-toast="Mensalidade de julho selecionada.">
+                  <button class="card-link" type="button" data-toast="Abrindo mensalidade de julho.">
                     Ver mensalidade
                     <svg><use href="#icon-arrow"></use></svg>
                   </button>
@@ -559,7 +560,7 @@
                     <span class="overline">MURAL DO STUDIO</span>
                     <h3>Comunicados</h3>
                   </div>
-                  <button class="text-button" type="button" data-toast="Você está vendo os comunicados mais recentes.">Ver todos</button>
+                  <button class="text-button" type="button" data-toast="Comunicados atualizados.">Ver todos</button>
                 </header>
                 <div class="notice-grid">
                   <button class="notice-card" type="button" data-toast="As avaliações físicas podem ser agendadas pela agenda.">
@@ -567,7 +568,7 @@
                     <strong>Semana de avaliação física</strong>
                     <p>Horários extras disponíveis até sexta-feira.</p>
                   </button>
-                  <button class="notice-card notice-card--quiet" type="button" data-toast="Desafio de frequência selecionado.">
+                  <button class="notice-card notice-card--quiet" type="button" data-toast="Abrindo desafio de frequência.">
                     <span>01 AGO</span>
                     <strong>Desafio de frequência</strong>
                     <p>Quatro semanas para construir uma rotina consistente.</p>
@@ -602,8 +603,8 @@
                   <span class="schedule-item__line"></span>
                   <div>
                     <span class="status-pill status-pill--confirmed">Confirmada</span>
-                    <h3>Treino acompanhado</h3>
-                    <p>Grupo de força · Vinicius Pontes · 50 min</p>
+                    <h3>Treino individual</h3>
+                    <p>Vinicius Pontes · 50 min</p>
                   </div>
                   <button class="icon-control" type="button" data-toast="Detalhes desta aula abertos."><svg><use href="#icon-more"></use></svg></button>
                 </article>
@@ -650,25 +651,25 @@
                   <span class="exercise-order">01</span>
                   <div class="exercise-thumb"><span>AG</span></div>
                   <div><h3>Agachamento livre</h3><p>4 séries · 8 repetições · 42 kg</p></div>
-                  <button class="icon-control" type="button" data-toast="Agachamento livre selecionado."><svg><use href="#icon-arrow"></use></svg></button>
+                  <button class="icon-control" type="button" data-toast="Abrindo agachamento livre."><svg><use href="#icon-arrow"></use></svg></button>
                 </article>
                 <article>
                   <span class="exercise-order">02</span>
                   <div class="exercise-thumb"><span>LG</span></div>
                   <div><h3>Leg press 45°</h3><p>4 séries · 10 repetições · 120 kg</p></div>
-                  <button class="icon-control" type="button" data-toast="Leg press 45° selecionado."><svg><use href="#icon-arrow"></use></svg></button>
+                  <button class="icon-control" type="button" data-toast="Abrindo leg press 45°."><svg><use href="#icon-arrow"></use></svg></button>
                 </article>
                 <article>
                   <span class="exercise-order">03</span>
                   <div class="exercise-thumb"><span>ST</span></div>
                   <div><h3>Stiff com halteres</h3><p>3 séries · 10 repetições · 18 kg</p></div>
-                  <button class="icon-control" type="button" data-toast="Stiff com halteres selecionado."><svg><use href="#icon-arrow"></use></svg></button>
+                  <button class="icon-control" type="button" data-toast="Abrindo stiff com halteres."><svg><use href="#icon-arrow"></use></svg></button>
                 </article>
                 <article>
                   <span class="exercise-order">04</span>
                   <div class="exercise-thumb"><span>RM</span></div>
                   <div><h3>Remada baixa</h3><p>3 séries · 12 repetições · 32 kg</p></div>
-                  <button class="icon-control" type="button" data-toast="Remada baixa selecionada."><svg><use href="#icon-arrow"></use></svg></button>
+                  <button class="icon-control" type="button" data-toast="Abrindo remada baixa."><svg><use href="#icon-arrow"></use></svg></button>
                 </article>
               </div>
               <button class="button button--primary button--start" type="button" id="start-workout">
@@ -703,10 +704,10 @@
                         <stop offset="1" stop-color="var(--accent)" stop-opacity="0" />
                       </linearGradient>
                     </defs>
-                    <g class="chart-grid-lines"><path d="M0 40H720M0 100H720M0 160H720M0 220H720" /></g>
-                    <path class="chart-area-fill" d="M0 210C90 194 105 173 180 181s115-70 180-60 91-44 180-26 108-40 180-55V260H0Z" fill="url(#studentArea)" />
-                    <path class="chart-main-line" d="M0 210C90 194 105 173 180 181s115-70 180-60 91-44 180-26 108-40 180-55" />
-                    <g class="chart-points"><circle cx="180" cy="181" r="5" /><circle cx="360" cy="121" r="5" /><circle cx="540" cy="95" r="5" /><circle cx="720" cy="40" r="5" /></g>
+                    <g class="chart-grid-lines"><path d="M8 40H712M8 100H712M8 160H712M8 220H712" /></g>
+                    <path class="chart-area-fill" d="M8 210C96 194 111 173 184 181s111-70 176-60 91-44 176-26 103-40 176-55V260H8Z" fill="url(#studentArea)" />
+                    <path class="chart-main-line" d="M8 210C96 194 111 173 184 181s111-70 176-60 91-44 176-26 103-40 176-55" />
+                    <g class="chart-points"><circle cx="184" cy="181" r="5" /><circle cx="360" cy="121" r="5" /><circle cx="536" cy="95" r="5" /><circle cx="712" cy="40" r="5" /></g>
                   </svg>
                   <div class="chart-labels"><span>MAI</span><span>JUN</span><span>JUL</span><span>AGO</span></div>
                 </article>
@@ -854,7 +855,7 @@
                 </header>
                 <div class="compact-agenda">
                   <article><time>16:00</time><i></i><span><strong>Avaliação física</strong><small>Mariana Costa · 45 min</small></span><b>1 aluno</b></article>
-                  <article><time>18:30</time><i></i><span><strong>Treino acompanhado</strong><small>Grupo de força · 50 min</small></span><b>6 alunos</b></article>
+                  <article><time>18:30</time><i></i><span><strong>Treino individual</strong><small>Carolina Mendes · 50 min</small></span><b>1 aluno</b></article>
                   <article><time>19:30</time><i></i><span><strong>Treino individual</strong><small>Henrique Sousa · 60 min</small></span><b>1 aluno</b></article>
                 </div>
               </section>
@@ -863,7 +864,7 @@
             <section class="app-view" data-view="coach-students">
               <header class="page-intro page-intro--compact">
                 <div><span class="overline">42 ALUNOS ATIVOS</span><h2>Alunos</h2><p>Histórico, treino e acompanhamento em um único registro.</p></div>
-                <button class="button button--primary" type="button" data-toast="Cadastro de novo aluno selecionado."><svg><use href="#icon-plus"></use></svg> Convidar aluno</button>
+                <button class="button button--primary" type="button" data-toast="Novo convite de aluno."><svg><use href="#icon-plus"></use></svg> Convidar aluno</button>
               </header>
               <label class="search-field"><svg><use href="#icon-search"></use></svg><input type="search" id="student-search" placeholder="Buscar por nome ou objetivo" /></label>
               <div class="student-table" id="student-table">
@@ -877,8 +878,8 @@
 
             <section class="app-view" data-view="coach-agenda">
               <header class="page-intro page-intro--compact">
-                <div><span class="overline">GESTÃO DE HORÁRIOS</span><h2>Agenda do studio</h2><p>Aulas individuais, grupos, recorrências e avaliações.</p></div>
-                <button class="button button--primary" type="button" data-toast="Nova aula aberta para configuração."><svg><use href="#icon-plus"></use></svg> Nova aula</button>
+                <div><span class="overline">GESTÃO DE HORÁRIOS</span><h2>Agenda do studio</h2><p>Treinos individuais, recorrências e avaliações físicas.</p></div>
+                <button class="button button--primary" type="button" data-toast="Novo agendamento."><svg><use href="#icon-plus"></use></svg> Novo horário</button>
               </header>
               <div class="calendar-toolbar">
                 <button class="icon-control" type="button" aria-label="Semana anterior"><svg><use href="#icon-back"></use></svg></button>
@@ -886,13 +887,14 @@
                 <button class="icon-control icon-control--next" type="button" aria-label="Próxima semana"><svg><use href="#icon-arrow"></use></svg></button>
                 <button class="button button--secondary" type="button">Hoje</button>
               </div>
-              <div class="coach-calendar">
+              <p class="calendar-mobile-hint">Deslize para ver os outros dias</p>
+              <div class="coach-calendar" id="coach-calendar" role="region" aria-label="Agenda semanal; deslize para consultar os outros dias" tabindex="0">
                 <div class="coach-calendar__times"><span>07:00</span><span>09:00</span><span>12:00</span><span>16:00</span><span>18:00</span><span>20:00</span></div>
-                <div class="coach-calendar__day"><header><span>SEG</span><strong>27</strong></header><button style="--start:1;--span:1">Grupo manhã<small>6 alunos</small></button><button style="--start:4;--span:1">Avaliação<small>Mariana</small></button></div>
-                <div class="coach-calendar__day is-today"><header><span>TER</span><strong>28</strong></header><button style="--start:1;--span:1">Individual<small>Rafael</small></button><button style="--start:4;--span:1">Avaliação<small>Mariana</small></button><button style="--start:5;--span:1">Grupo força<small>6 alunos</small></button></div>
-                <div class="coach-calendar__day"><header><span>QUA</span><strong>29</strong></header><button style="--start:2;--span:1">Grupo manhã<small>5 alunos</small></button><button style="--start:5;--span:1">Individual<small>Carolina</small></button></div>
-                <div class="coach-calendar__day"><header><span>QUI</span><strong>30</strong></header><button style="--start:1;--span:1">Individual<small>Henrique</small></button><button style="--start:4;--span:2">Avaliações<small>3 alunos</small></button></div>
-                <div class="coach-calendar__day"><header><span>SEX</span><strong>31</strong></header><button style="--start:2;--span:1">Grupo manhã<small>6 alunos</small></button><button style="--start:5;--span:1">Grupo força<small>6 alunos</small></button></div>
+                <div class="coach-calendar__day"><header><span>SEG</span><strong>27</strong></header><button style="--start:1;--span:1">Treino individual<small>Larissa</small></button><button style="--start:4;--span:1">Avaliação física<small>Mariana</small></button></div>
+                <div class="coach-calendar__day is-today"><header><span>TER</span><strong>28</strong></header><button style="--start:1;--span:1">Treino individual<small>Rafael</small></button><button style="--start:4;--span:1">Avaliação física<small>Mariana</small></button><button style="--start:5;--span:1">Treino individual<small>Carolina</small></button></div>
+                <div class="coach-calendar__day"><header><span>QUA</span><strong>29</strong></header><button style="--start:2;--span:1">Avaliação física<small>Bruno</small></button><button style="--start:5;--span:1">Treino individual<small>Carolina</small></button></div>
+                <div class="coach-calendar__day"><header><span>QUI</span><strong>30</strong></header><button style="--start:1;--span:1">Treino individual<small>Henrique</small></button><button style="--start:4;--span:2">Avaliação física<small>Larissa</small></button></div>
+                <div class="coach-calendar__day"><header><span>SEX</span><strong>31</strong></header><button style="--start:2;--span:1">Treino individual<small>Mariana</small></button><button style="--start:5;--span:1">Avaliação física<small>Rafael</small></button></div>
               </div>
             </section>
 
@@ -1041,7 +1043,7 @@
         </button>
         <button type="button" data-open-experience>
           <svg><use href="#icon-palette"></use></svg>
-          <span><strong>Trocar visual</strong><small id="account-experience">Mineral selecionado</small></span>
+          <span><strong>Trocar visual</strong><small id="account-experience">Atlântico selecionado</small></span>
           <svg><use href="#icon-arrow"></use></svg>
         </button>
         <button class="account-dialog__logout" type="button" data-logout>
@@ -1052,6 +1054,6 @@
       </div>
     </dialog>
 
-    <script type="module" src="app.js?v=12"></script>
+    <script type="module" src="app.js?v=13"></script>
   </body>
 </html>
