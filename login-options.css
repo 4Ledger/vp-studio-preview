@@ -593,99 +593,112 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 /* Concept 02: Cobre Urbano */
 .login-preview--terracota {
   flex-direction: column;
-  padding: 49px 20px 20px;
-  color: #202625;
+  padding: 50px 22px 22px;
+  color: #232a28;
   background:
-    radial-gradient(circle at 100% 0, rgba(146, 80, 54, 0.16), transparent 31%),
-    linear-gradient(150deg, transparent 0 66%, rgba(41, 48, 49, 0.045) 66%),
-    #e8eae7;
+    linear-gradient(180deg, #ded9d0 0 132px, transparent 132px),
+    #ebe8e2;
 }
 
 .clay-topbar {
   display: flex;
+  min-height: 34px;
   align-items: center;
   justify-content: space-between;
 }
 
 .clay-mark {
-  display: grid;
-  width: 45px;
-  height: 45px;
-  place-items: center;
-  border: 1px solid rgba(47, 57, 55, 0.1);
-  border-radius: 12px;
-  background: #f9faf8;
-  box-shadow: 0 8px 18px rgba(36, 45, 43, 0.08);
+  display: flex;
+  align-items: center;
 }
 
 .clay-mark img {
-  width: 33px;
-  height: 25px;
+  width: 52px;
+  height: 34px;
   object-fit: contain;
+  object-position: left center;
 }
 
 .clay-support {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #707c78;
-  color: #5f6a66;
-  font-size: 0.65rem;
-  font-weight: 700;
+  color: #69716d;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
 }
 
 .clay-message {
-  max-width: 280px;
-  margin-top: 36px;
+  max-width: 290px;
+  margin-bottom: 18px;
+  padding-top: 2px;
 }
 
 .clay-message .screen-label {
-  color: #925036;
+  color: #a35f43;
 }
 
 .clay-message h2 {
-  margin: 10px 0;
+  margin: 10px 0 8px;
   font-family: var(--display);
-  font-size: 2.55rem;
-  font-weight: 620;
+  font-size: 2.3rem;
+  font-weight: 650;
   letter-spacing: -0.055em;
-  line-height: 0.94;
+  line-height: 0.93;
 }
 
 .clay-message p {
-  max-width: 255px;
+  max-width: 250px;
   margin: 0;
-  color: #5f6a66;
-  font-size: 0.78rem;
-  line-height: 1.45;
+  color: #77422f;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: -0.012em;
+  line-height: 1.35;
 }
 
 .clay-panel {
-  margin-top: auto;
-  padding: 18px;
-  border: 1px solid rgba(47, 57, 55, 0.11);
-  border-radius: 23px;
-  background: rgba(250, 251, 249, 0.92);
-  box-shadow: 0 22px 45px rgba(36, 45, 43, 0.13);
+  position: relative;
+  margin-top: 28px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(77, 69, 59, 0.14);
+  border-radius: 21px;
+  background: #fffdf8;
+  box-shadow: 0 20px 44px rgba(49, 42, 35, 0.12);
+}
+
+.clay-panel::before {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 48px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: #a35f43;
+  content: "";
 }
 
 .role-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 17px;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border-radius: 13px;
+  background: #e8e3da;
 }
 
 .role-card {
   position: relative;
   display: grid;
-  min-height: 62px;
-  grid-template-columns: 22px 1fr 18px;
+  min-height: 54px;
+  grid-template-columns: 20px 1fr 17px;
   align-items: center;
-  gap: 7px;
-  padding: 10px;
-  border: 1px solid rgba(47, 57, 55, 0.14);
-  border-radius: 13px;
-  color: #4d5955;
-  background: #e5e8e4;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #59625e;
+  background: transparent;
   font: inherit;
   cursor: pointer;
   text-align: left;
@@ -693,14 +706,14 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 }
 
 .role-card.is-active {
-  border-color: #30383a;
+  border-color: #303735;
   color: #fffaf6;
-  background: #30383a;
-  box-shadow: 0 8px 18px rgba(37, 45, 44, 0.16);
+  background: #303735;
+  box-shadow: 0 6px 14px rgba(43, 50, 47, 0.15);
 }
 
 .role-card svg {
-  width: 22px;
+  width: 20px;
 }
 
 .role-card b {
@@ -710,11 +723,12 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 
 .role-card i {
   display: grid;
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   place-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.16);
+  color: #f4c0a5;
+  background: rgba(255, 255, 255, 0.13);
   font-size: 0.58rem;
   font-style: normal;
   opacity: 0;
@@ -726,20 +740,22 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 
 .clay-field {
   display: grid;
-  gap: 5px;
-  margin-top: 10px;
-  color: #596560;
+  gap: 6px;
+  margin-top: 11px;
+  color: #626a66;
   font-size: 0.62rem;
   font-weight: 800;
 }
 
 .clay-input {
   display: flex;
-  min-height: 40px;
+  min-height: 42px;
   align-items: center;
-  padding: 0 4px;
-  border-bottom: 1px solid rgba(47, 57, 55, 0.22);
-  color: #7d8984;
+  padding: 0 12px;
+  border: 1px solid rgba(77, 69, 59, 0.17);
+  border-radius: 10px;
+  color: #7d8581;
+  background: #fbf9f4;
   font-size: 0.72rem;
   font-weight: 500;
 }
@@ -749,14 +765,14 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 }
 
 .clay-input b {
-  color: #80452f;
+  color: #8a4c35;
   font-size: 0.61rem;
 }
 
 .clay-forgot {
   display: block;
   margin: 10px 0 13px;
-  color: #80452f;
+  color: #8a4c35;
   font-size: 0.61rem;
   font-weight: 700;
   text-align: right;
@@ -765,8 +781,9 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 .clay-primary {
   justify-content: space-between;
   padding: 0 15px;
-  color: #f8faf7;
-  background: #30383a;
+  color: #fffaf6;
+  background: #77422f;
+  box-shadow: 0 9px 18px rgba(119, 66, 47, 0.18);
 }
 
 .clay-primary b {
@@ -775,13 +792,13 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 
 .clay-account {
   margin: 12px 0 0;
-  color: #5f6a66;
+  color: #656e69;
   font-size: 0.62rem;
   text-align: center;
 }
 
 .clay-account strong {
-  color: #80452f;
+  color: #8a4c35;
 }
 
 /* Concept 03: Atlântico */
@@ -1008,19 +1025,23 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 
   .phone-frame {
     position: relative;
-    height: 428px;
-    max-width: 260px;
+    width: 390px;
+    max-width: none;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: -262px;
+    margin-left: calc(50% - 195px);
+    transform: scale(.64);
+    transform-origin: top center;
   }
 
   .login-preview {
-    position: absolute;
-    top: 7px;
-    left: 7px;
-    width: 172.414%;
-    height: 714px;
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: auto;
     min-height: 714px;
-    transform: scale(.58);
-    transform-origin: top left;
+    transform: none;
   }
 
   .concept-description {
@@ -1030,6 +1051,50 @@ html[data-theme="dark"] .picker-theme-control .theme-icon--dark {
 
   .page-footer {
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 340px) {
+  .phone-frame {
+    margin-bottom: -306px;
+    transform: scale(.58);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 719px) {
+  .phone-frame {
+    margin-bottom: -73px;
+    transform: scale(.9);
+  }
+}
+
+@media (pointer: coarse) and (max-width: 719px) {
+  .role-segment button,
+  .role-card,
+  .editorial-roles > button {
+    position: relative;
+  }
+
+  .role-segment button::after,
+  .role-card::after {
+    position: absolute;
+    z-index: 3;
+    inset: -14px 0;
+    content: "";
+  }
+
+  .editorial-roles > button:first-child::after {
+    position: absolute;
+    z-index: 3;
+    inset: -28px 0 0;
+    content: "";
+  }
+
+  .editorial-roles > button:last-child::after {
+    position: absolute;
+    z-index: 3;
+    inset: 0 0 -28px;
+    content: "";
   }
 }
 
@@ -1162,15 +1227,17 @@ html[data-theme="dark"] .preview-secondary {
 html[data-theme="dark"] .login-preview--terracota {
   color: #f2f4f0;
   background:
-    radial-gradient(circle at 100% 0, rgba(210, 138, 104, 0.16), transparent 31%),
-    linear-gradient(150deg, transparent 0 66%, rgba(255, 255, 255, 0.03) 66%),
-    #1c2220;
+    linear-gradient(180deg, #2e2824 0 132px, transparent 132px),
+    #181d1b;
 }
 
-html[data-theme="dark"] .clay-mark,
 html[data-theme="dark"] .clay-panel {
   border-color: rgba(228, 238, 232, 0.1);
-  background: #262d2b;
+  background: #272d29;
+}
+
+html[data-theme="dark"] .clay-mark {
+  background: transparent;
 }
 
 html[data-theme="dark"] .clay-message p,
@@ -1180,26 +1247,35 @@ html[data-theme="dark"] .clay-account {
   color: #aeb8b2;
 }
 
+html[data-theme="dark"] .clay-message p {
+  color: #dba083;
+}
+
 html[data-theme="dark"] .role-card {
-  border-color: rgba(228, 238, 232, 0.12);
+  border-color: transparent;
   color: #b8c3bd;
-  background: #303834;
+  background: transparent;
+}
+
+html[data-theme="dark"] .role-cards {
+  background: #303733;
 }
 
 html[data-theme="dark"] .role-card.is-active {
-  border-color: #c97c59;
+  border-color: #d18b69;
   color: #fff8f3;
-  background: #8c4b34;
+  background: #71422f;
 }
 
 html[data-theme="dark"] .clay-input {
   border-color: rgba(228, 238, 232, 0.17);
   color: #aeb8b2;
+  background: #202623;
 }
 
 html[data-theme="dark"] .clay-primary {
-  color: #f7faf7;
-  background: #394442;
+  color: #fff8f3;
+  background: #9d6045;
 }
 
 html[data-theme="dark"] .login-preview--editorial {

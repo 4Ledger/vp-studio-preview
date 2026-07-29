@@ -4199,16 +4199,18 @@ textarea {
 
   .login-motto {
     display: block;
-    margin-top: 12px;
+    max-width: 18ch;
+    margin-top: 16px;
     color: var(--ink);
     font-family: var(--font-display);
-    font-size: .98rem;
-    font-weight: 700;
-    letter-spacing: -.01em;
+    font-size: clamp(1.35rem, 6.4vw, 1.8rem);
+    font-weight: 720;
+    letter-spacing: -.035em;
+    line-height: 1.04;
   }
 
   .login-heading .login-instruction {
-    margin-top: 6px;
+    margin-top: 12px;
   }
 
   .workspace-shell.is-active {

@@ -1,4 +1,4 @@
-import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=13";
+import { mountBodyMap, validateBodyMapCatalog } from "./body-map.js?v=14";
 
 const icon = (name) => `<svg aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 
@@ -237,7 +237,7 @@ function updateThemeColor() {
   const dark = document.documentElement.dataset.theme === "dark";
   const colors = {
     mineral: dark ? "#1d2529" : "#edf0f1",
-    terracota: dark ? "#171b1a" : "#f1f1ee",
+    terracota: dark ? "#181d1b" : "#ebe8e2",
     editorial: dark ? "#14232c" : "#edf1f3",
   };
   document.querySelector('meta[name="theme-color"]').content = colors[state.experience] || colors.editorial;

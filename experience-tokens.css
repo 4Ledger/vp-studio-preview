@@ -158,53 +158,53 @@ html[data-experience="terracota"] {
   --font-display: "Bahnschrift", "Aptos Display", "Trebuchet MS", sans-serif;
   --font-body: "Aptos", "Segoe UI Variable Text", "Calibri", sans-serif;
 
-  --canvas: #f1f1ee;
-  --canvas-deep: #e5e7e3;
-  --surface: #f8f8f5;
-  --surface-raised: #ffffff;
-  --surface-muted: #e2e5e1;
-  --surface-strong: #293031;
-  --surface-strong-2: #343c3d;
-  --ink: #202625;
-  --ink-soft: #3d4744;
-  --muted: #5f6a66;
-  --muted-2: #7b8581;
-  --line: #cfd4d0;
-  --line-strong: #b8c0bb;
-  --accent: #925036;
-  --accent-strong: #713a29;
-  --accent-soft: #e8d8cf;
-  --accent-pale: #f2e7e1;
-  --shadow-sm: 0 2px 4px rgb(37 45 44 / 5%), 0 10px 28px rgb(37 45 44 / 7%);
-  --shadow-md: 0 22px 58px rgb(37 45 44 / 14%);
+  --canvas: #ebe8e2;
+  --canvas-deep: #ded9d0;
+  --surface: #f5f2ec;
+  --surface-raised: #fffdf8;
+  --surface-muted: #e6e1d8;
+  --surface-strong: #252c2a;
+  --surface-strong-2: #333b38;
+  --ink: #232a28;
+  --ink-soft: #414b47;
+  --muted: #656e69;
+  --muted-2: #858d88;
+  --line: #d3cdc3;
+  --line-strong: #bdb5a9;
+  --accent: #a35f43;
+  --accent-strong: #77422f;
+  --accent-soft: #ead8ce;
+  --accent-pale: #f3e8e1;
+  --shadow-sm: 0 2px 4px rgb(44 39 34 / 5%), 0 10px 28px rgb(44 39 34 / 7%);
+  --shadow-md: 0 22px 58px rgb(44 39 34 / 14%);
   --radius-xs: 7px;
   --radius-sm: 11px;
   --radius-md: 17px;
   --radius-lg: 23px;
   --rail-width: 234px;
-  --role-active-bg: #30383a;
+  --role-active-bg: #303735;
   --role-active-fg: #fffaf6;
-  --role-active-line: #30383a;
+  --role-active-line: #303735;
 
   --experience-rail-width: 234px;
-  --experience-rail-bg: #293031;
+  --experience-rail-bg: #252c2a;
   --experience-rail-fg: #f5f6f2;
   --experience-rail-muted: #aeb8b3;
   --experience-rail-line: rgb(230 237 233 / 13%);
   --experience-nav-hover: rgb(230 237 233 / 7%);
-  --experience-nav-active-bg: #925036;
+  --experience-nav-active-bg: #a35f43;
   --experience-nav-active-fg: #fffaf6;
   --experience-nav-active-marker: transparent;
   --experience-nav-radius: 11px;
 
-  --experience-header-bg: color-mix(in srgb, #f1f1ee 94%, transparent);
-  --experience-header-line: #cfd4d0;
+  --experience-header-bg: color-mix(in srgb, #ebe8e2 94%, transparent);
+  --experience-header-line: #d3cdc3;
   --experience-header-blur: 16px;
 
   --experience-tabbar-bg: color-mix(in srgb, #ffffff 96%, transparent);
-  --experience-tabbar-line: #cbd1cd;
-  --experience-tabbar-shadow: 0 -10px 32px rgb(37 45 44 / 10%);
-  --experience-tab-active-bg: #30383a;
+  --experience-tabbar-line: #d3cdc3;
+  --experience-tabbar-shadow: 0 -10px 32px rgb(44 39 34 / 10%);
+  --experience-tab-active-bg: #303735;
   --experience-tab-active-fg: #fffaf6;
   --experience-tab-radius: 11px;
 
@@ -212,9 +212,9 @@ html[data-experience="terracota"] {
   --experience-card-radius: 17px;
   --experience-panel-radius: 23px;
   --experience-card-bg: #f8f8f5;
-  --experience-card-line: #cfd4d0;
-  --experience-card-shadow: 0 2px 4px rgb(37 45 44 / 5%), 0 10px 28px rgb(37 45 44 / 7%);
-  --experience-raised-shadow: 0 22px 58px rgb(37 45 44 / 14%);
+  --experience-card-line: #d3cdc3;
+  --experience-card-shadow: 0 2px 4px rgb(44 39 34 / 5%), 0 10px 28px rgb(44 39 34 / 7%);
+  --experience-raised-shadow: 0 22px 58px rgb(44 39 34 / 14%);
   --experience-page-max: 1420px;
   --experience-page-gap: clamp(19px, 2vw, 30px);
   --experience-card-padding: clamp(19px, 2vw, 27px);
@@ -222,23 +222,23 @@ html[data-experience="terracota"] {
 
 html[data-experience="terracota"][data-theme="dark"] {
   color-scheme: dark;
-  --canvas: #171b1a;
-  --canvas-deep: #111413;
-  --surface: #202624;
-  --surface-raised: #262d2b;
-  --surface-muted: #303834;
-  --surface-strong: #111514;
-  --surface-strong-2: #29312e;
+  --canvas: #181d1b;
+  --canvas-deep: #111513;
+  --surface: #202623;
+  --surface-raised: #272d29;
+  --surface-muted: #303733;
+  --surface-strong: #111513;
+  --surface-strong-2: #2a312d;
   --ink: #f2f4f0;
   --ink-soft: #d4dad5;
   --muted: #aeb8b2;
   --muted-2: #87928c;
-  --line: #3e4843;
-  --line-strong: #52605a;
-  --accent: #d28a68;
-  --accent-strong: #e2a283;
-  --accent-soft: #4a342d;
-  --accent-pale: #3b2d28;
+  --line: #414943;
+  --line-strong: #56615a;
+  --accent: #d18b69;
+  --accent-strong: #e4a788;
+  --accent-soft: #49352d;
+  --accent-pale: #392e29;
   --shadow-sm: 0 2px 4px rgb(0 0 0 / 20%), 0 10px 28px rgb(0 0 0 / 18%);
   --shadow-md: 0 22px 60px rgb(0 0 0 / 36%);
   --role-active-bg: #8c4b34;
@@ -252,15 +252,15 @@ html[data-experience="terracota"][data-theme="dark"] {
   --experience-nav-hover: rgb(231 239 234 / 7%);
   --experience-nav-active-bg: #8c4b34;
   --experience-nav-active-fg: #fff8f3;
-  --experience-header-bg: color-mix(in srgb, #171b1a 94%, transparent);
-  --experience-header-line: #3e4843;
+  --experience-header-bg: color-mix(in srgb, #181d1b 94%, transparent);
+  --experience-header-line: #414943;
   --experience-tabbar-bg: color-mix(in srgb, #202624 96%, transparent);
   --experience-tabbar-line: #46524c;
   --experience-tabbar-shadow: 0 -12px 34px rgb(0 0 0 / 30%);
   --experience-tab-active-bg: #8c4b34;
   --experience-tab-active-fg: #fff8f3;
-  --experience-card-bg: #202624;
-  --experience-card-line: #3e4843;
+  --experience-card-bg: #202623;
+  --experience-card-line: #414943;
   --experience-card-shadow: 0 2px 4px rgb(0 0 0 / 18%), 0 10px 28px rgb(0 0 0 / 17%);
   --experience-raised-shadow: 0 22px 60px rgb(0 0 0 / 34%);
 }
@@ -610,17 +610,30 @@ html[data-experience="terracota"] .login-story__status {
   bottom: clamp(30px, 5vw, 70px);
 }
 
-html[data-experience="terracota"] .login-panel__body {
+html[data-experience="terracota"] .login-screen[data-concept="terracota"] .login-panel__body {
   width: min(100%, 540px);
   padding: 36px;
   border: 1px solid var(--experience-card-line);
-  border-top: 5px solid var(--accent);
+  border-radius: 20px;
   background: var(--surface-raised);
   box-shadow: var(--experience-raised-shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+html[data-experience="terracota"] .login-screen[data-concept="terracota"] .login-panel__body::before {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  width: 54px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--accent);
+  content: "";
 }
 
 html[data-experience="terracota"] .role-selector {
-  gap: 8px;
+  gap: 4px;
   padding: 4px;
   border: 0;
   background: var(--surface-muted);
@@ -630,6 +643,11 @@ html[data-experience="terracota"] .role-selector__item {
   min-height: 70px;
   padding-right: 46px;
   color: var(--muted);
+}
+
+html[data-experience="terracota"] .role-selector__item.is-active .role-selector__state {
+  color: var(--accent);
+  background: rgb(255 255 255 / 13%);
 }
 
 html[data-experience="terracota"] .role-selector__state,
@@ -858,8 +876,13 @@ html[data-experience="editorial"] .environment-badge {
   }
 
   html[data-experience] .login-panel__body {
-    width: min(100%, 560px);
-    margin: clamp(24px, 6vh, 56px) auto 0;
+    width: min(100%, 500px);
+    margin: clamp(26px, 6vh, 52px) auto max(24px, env(safe-area-inset-bottom));
+    padding: clamp(24px, 6vw, 34px);
+    border: 1px solid var(--experience-card-line);
+    border-radius: var(--experience-panel-radius);
+    background: color-mix(in srgb, var(--surface-raised) 96%, transparent);
+    box-shadow: var(--experience-card-shadow);
   }
 
   html[data-experience="mineral"] .login-panel {
@@ -870,7 +893,7 @@ html[data-experience="editorial"] .environment-badge {
 
   html[data-experience="mineral"] .login-panel__body {
     width: min(100%, 500px);
-    margin-top: clamp(28px, 7vh, 72px);
+    margin-top: clamp(26px, 6vh, 52px);
     padding: clamp(24px, 6vw, 34px);
     border: 1px solid var(--experience-card-line);
     border-radius: 18px;
@@ -904,20 +927,39 @@ html[data-experience="editorial"] .environment-badge {
     border-top-width: 1px;
   }
 
-  html[data-experience="terracota"] .login-panel__body {
-    width: 100%;
-    margin: clamp(28px, 7vh, 64px) auto 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
+  html[data-experience="terracota"] .login-screen[data-concept="terracota"] .login-panel__body {
+    width: min(100%, 500px);
+    margin: clamp(26px, 6vh, 52px) auto max(24px, env(safe-area-inset-bottom));
+    padding: clamp(24px, 6vw, 32px);
+    border: 1px solid var(--experience-card-line);
+    border-radius: 20px;
+    background: var(--surface-raised);
+    box-shadow: var(--experience-card-shadow);
   }
 
   html[data-experience="terracota"] .login-panel {
     background:
-      radial-gradient(circle at 100% 0, var(--accent-soft), transparent 32%),
-      linear-gradient(160deg, transparent 0 72%, color-mix(in srgb, var(--accent) 6%, transparent) 72%),
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--accent-pale) 58%, var(--canvas)) 0 164px,
+        var(--canvas) 164px
+      ),
       var(--canvas);
+  }
+
+  html[data-experience="terracota"] .login-heading .overline {
+    color: var(--accent-strong);
+  }
+
+  html[data-experience="terracota"] .login-heading h2 {
+    max-width: 390px;
+    font-weight: 650;
+    letter-spacing: -.045em;
+    line-height: .98;
+  }
+
+  html[data-experience="terracota"] .login-motto {
+    color: var(--accent-strong);
   }
 
   html[data-experience="terracota"] .role-selector {
@@ -961,11 +1003,12 @@ html[data-experience="editorial"] .environment-badge {
     border-radius: var(--experience-tab-radius);
   }
 
-  html[data-experience="editorial"] .login-panel__body {
-    width: 100%;
-    margin: clamp(28px, 7vh, 68px) auto 0;
-    padding: 24px;
+  html[data-experience="editorial"] .login-screen[data-concept="editorial"] .login-panel__body {
+    width: min(100%, 500px);
+    margin: clamp(26px, 6vh, 52px) auto max(24px, env(safe-area-inset-bottom));
+    padding: clamp(24px, 6vw, 32px);
     border: 1px solid var(--experience-card-line);
+    border-radius: 20px;
     background: color-mix(in srgb, var(--surface-raised) 94%, transparent);
     box-shadow: var(--experience-card-shadow);
   }
@@ -981,6 +1024,10 @@ html[data-experience="editorial"] .environment-badge {
     font-family: var(--font-display);
     font-weight: 620;
     line-height: 1;
+  }
+
+  html[data-experience="editorial"] .login-motto {
+    color: var(--accent-strong);
   }
 
   html[data-experience="editorial"] .role-selector {
@@ -1040,11 +1087,12 @@ html[data-experience="editorial"] .environment-badge {
     padding-left: 16px;
   }
 
-  html[data-experience="mineral"] .login-panel__body {
+  html[data-experience] .login-panel__body {
     padding: 20px;
   }
 
-  html[data-experience="editorial"] .login-panel__body {
+  html[data-experience="terracota"] .login-screen[data-concept="terracota"] .login-panel__body,
+  html[data-experience="editorial"] .login-screen[data-concept="editorial"] .login-panel__body {
     padding: 20px;
   }
 
